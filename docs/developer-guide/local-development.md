@@ -34,11 +34,11 @@ So once you're under VPN and opened the link to Gerrit you're supposed to see th
 
 Click the "Sign in" button and in a login page select "access-epam":
 
-!![Sign in page](../assets/developer-guide/gerrit_logging_page.png "Sign in page")
+![Sign in page](../assets/developer-guide/gerrit_logging_page.png "Sign in page")
 
 The system should automatically pull your account and access you to the main menu:
 
-  !![Gerrit main menu](../assets/developer-guide/gerrit_main_menu.png "Gerrit main menu")
+  ![Gerrit main menu](../assets/developer-guide/gerrit_main_menu.png "Gerrit main menu")
 
 Now you can browse the git repositories available and clone the one you need with commit-msg hook.
 
