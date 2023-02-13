@@ -30,7 +30,7 @@ To start from, you need a repository with code to work with. To get the link to 
 
 So once you're under VPN and opened the link to Gerrit you're supposed to see the following:
 
-!![Gerrit web page](../assets/developer-guide/gerrit_web_page.png "Gerrit web page")
+![Gerrit web page](../assets/developer-guide/gerrit_web_page.png "Gerrit web page")
 
 Click the "Sign in" button and in a login page select "access-epam":
 
@@ -42,7 +42,7 @@ The system should automatically pull your account and access you to the main men
 
 Now you can browse the git repositories available and clone the one you need with commit-msg hook.
 
-!![Browsing repos](../assets/developer-guide/cloning_repo.png "Browsing repos")
+![Browsing repos](../assets/developer-guide/cloning_repo.png "Browsing repos")
 
 The procedure of generating commit-msg hook described [here](https://kb.epam.com/display/public/EPMDEDP/Gerrit+Setup+for+Developer).
 
@@ -55,7 +55,7 @@ The procedure of generating commit-msg hook described [here](https://kb.epam.com
 
 Now that we have accessed the main menu and cloned the repo there is one thing that will be needed during further setup. Let's click the cogwheel button on the top right corner of the page and then move to "HTTP Credentials" tab. Once you end up in the "HTTP Credentials" section click "Generate new password". It's not a password for logging into the main menu but for the Gerrit Plugin we will use in our IDE. Write down the password somewhere since we will use it soon.
 
-!![Generating password for Gerrit plugin](../assets/developer-guide/https_credentials_for_gerrit_plugin.png "Generating password for Gerrit plugin")
+![Generating password for Gerrit plugin](../assets/developer-guide/https_credentials_for_gerrit_plugin.png "Generating password for Gerrit plugin")
 
 Also, you should have your Docker, Kubernetes and Helm already setup before moving on.
 
@@ -70,7 +70,7 @@ Now then, we can move onto the IDE. We will omit details pertaining activating I
 
 So click on the cogwheel at the top right cornet, choose "Plugins" so the plugins menu will appear, click to the search field at the middle of the menu and type "Kubernetes". Then click on the install button painted in green and wait till it gets installed. Do the same steps to install "Gerrit" pluggin.
 
-!![Generating password for Gerrit plugin](../assets/developer-guide/plugin_installation.png "Generating password for Gerrit plugin")
+![Generating password for Gerrit plugin](../assets/developer-guide/plugin_installation.png "Generating password for Gerrit plugin")
 
 !!! note
     Installing plugins requires you to relaunch your IDE so save all your work if there was any first before installing pluggins.
@@ -87,21 +87,21 @@ Unlikely from Kubernetes plugin, which is supposed to be automatically configure
 
 This should look like on the picture below:
 
-!![Gerrit plugin settings](../assets/developer-guide/gerrit_plugin_settings.png "Gerrit plugin settings")
+![Gerrit plugin settings](../assets/developer-guide/gerrit_plugin_settings.png "Gerrit plugin settings")
 
 Don't forget to click "Test" to check if everything is allright.
 
-!![Connection testing](../assets/developer-guide/gerrit_plugin_test_connection.png "Connection testing")
+![Connection testing](../assets/developer-guide/gerrit_plugin_test_connection.png "Connection testing")
 
 After successful setup of the plugin you can leverage it to make commits:
 
-!![Gerrit plugin usage](../assets/developer-guide/gerrit_plugin_usage.png "Gerrit plugin usage")
+![Gerrit plugin usage](../assets/developer-guide/gerrit_plugin_usage.png "Gerrit plugin usage")
 
 #### 4. Go Build Configuration
 
 Open folder in GoLand Intellij IDEA, click the ![add_config_button](../assets/developer-guide/add_config_button.png "add_config_button") button and select the **Go Build** option:
 
-!![Add configuration](../assets/developer-guide/add_configuration.png "Add configuration")
+![Add configuration](../assets/developer-guide/add_configuration.png "Add configuration")
 
 In Configuration tab, fill in the following:
 
@@ -111,7 +111,7 @@ In Configuration tab, fill in the following:
 
   3. In the Environment field, specify the platform name (OpenShift/Kubernetes);
 
-!![Build config](../assets/developer-guide/build_config.png "Build config")
+![Build config](../assets/developer-guide/build_config.png "Build config")
 
 That's it, you're all set! Good luck in coding.
 
@@ -126,17 +126,17 @@ Before making commit and sending it for review, you should take care of precauti
 
 You must always make tests and lints to make sure your code passes the tests and meets acceptance criteria. For most operators, tests already were written so you can run them.
 
-!![Tests directory for one of the operators](../assets/developer-guide/run_tests.png "Tests directory for one of the operators")
+![Tests directory for one of the operators](../assets/developer-guide/run_tests.png "Tests directory for one of the operators")
 
 The command make test should output the following:
 
-!![Tests directory for one of the operators](../assets/developer-guide/make_test.png ""make test" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_test.png ""make test" command")
 
 Also keep in mind that there is Sonarqube under the hood of EDP which will check your newly generated code find out if your new code is covered by the tests or not.
 
 Now let's see how make lint works:
 
-!![Tests directory for one of the operators](../assets/developer-guide/make_lint.png ""make lint" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_lint.png ""make lint" command")
 
 #### 2. make api-docs 
 
@@ -145,23 +145,23 @@ Now let's see how make lint works:
 
 "api-docs" generates documendation in .md format so the developer can read it.
 
-!!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png ""make api-docs" command with the file contents")
+!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png ""make api-docs" command with the file contents")
 
 #### 3. make generate
 
 "make generate" will refresh custom resource definitions for Kubernetes so that it will know which resources we're working with.
 
-!!["make generate" usage](../assets/developer-guide/make_generate.png ""make generate" usage")
+!["make generate" usage](../assets/developer-guide/make_generate.png ""make generate" usage")
 
 #### 4. make manifests
 
 There is also a manifests within your operator that generates zz_generated.deepcopy.go file in /api/v1 directory. This is how make manifests works:
 
-!!["make manifests" usage](../assets/developer-guide/make_manifests.png ""make manifests" usage")
+!["make manifests" usage](../assets/developer-guide/make_manifests.png ""make manifests" usage")
 
 It is also worth checking if the file was tailored properly, it should look like it's shown below:
 
-!![The contents of zz_generated.deepcopy.go file](../assets/developer-guide/deepcopy_file_common_look.png "The contents of zz_generated.deepcopy.go file")
+![The contents of zz_generated.deepcopy.go file](../assets/developer-guide/deepcopy_file_common_look.png "The contents of zz_generated.deepcopy.go file")
 
 
 ## Exceptional Cases
@@ -184,4 +184,4 @@ To resolve the issue, update the go dependency by applying the Golang command:
 #### Case 2 
 
 If Kubernetes plugin doesn't work automatically, make sure that it has the following configurations:
-!![Kubernetes plugin configuration](../assets/developer-guide/kubernetes_plugin_configs.png "Kubernetes plugin configuration")
+![Kubernetes plugin configuration](../assets/developer-guide/kubernetes_plugin_configs.png "Kubernetes plugin configuration")
