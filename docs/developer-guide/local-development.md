@@ -130,13 +130,13 @@ You must always make tests and lints to make sure your code passes the tests and
 
 The command make test should output the following:
 
-![Tests directory for one of the operators](../assets/developer-guide/make_test.png ""make test" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_test.png "make test command")
 
 Also keep in mind that there is Sonarqube under the hood of EDP which will check your newly generated code find out if your new code is covered by the tests or not.
 
 Now let's see how make lint works:
 
-![Tests directory for one of the operators](../assets/developer-guide/make_lint.png ""make lint" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_lint.png "make lint command")
 
 #### 2. make api-docs 
 
@@ -145,13 +145,13 @@ Now let's see how make lint works:
 
 "api-docs" generates documendation in .md format so the developer can read it.
 
-!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png ""make api-docs" command with the file contents")
+!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png "make api-docs command with the file contents")
 
 #### 3. make generate
 
 "make generate" will refresh custom resource definitions for Kubernetes so that it will know which resources we're working with.
 
-!["make generate" usage](../assets/developer-guide/make_generate.png ""make generate" usage")
+!["make generate" usage](../assets/developer-guide/make_generate.png "make generate usage")
 
 #### 4. make manifests
 
