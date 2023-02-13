@@ -157,7 +157,7 @@ Now let's see how make lint works:
 
 There is also a manifests within your operator that generates zz_generated.deepcopy.go file in /api/v1 directory. This is how make manifests works:
 
-!["make manifests" usage](../assets/developer-guide/make_manifests.png ""make manifests" usage")
+!["make manifests" usage](../assets/developer-guide/make_manifests.png "make manifests usage")
 
 It is also worth checking if the file was tailored properly, it should look like it's shown below:
 
