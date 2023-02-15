@@ -117,13 +117,13 @@ It is mandatory to run tests and lints to make sure the code passes the tests an
 
 The command "make test" should output the following:
 
-![Tests directory for one of the operators](../assets/developer-guide/make_test.png ""make test" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_test.png "make tests command")
 
 Also keep in mind that there is Sonarqube under the hood of EDP which checks newly generated code find out if the new code is covered enough by the tests or not. It requires at least 80% of the code to be covered by tests otherwise it causes errors in workflow.
 
 This is how "make lint" works:
 
-![Tests directory for one of the operators](../assets/developer-guide/make_lint.png ""make lint" command")
+![Tests directory for one of the operators](../assets/developer-guide/make_lint.png "make lint command")
 
 #### 3.2 Observe auto-generated docs, API and manifests
 
@@ -134,13 +134,13 @@ Generate documentation in .md format so the developer can read it.
 
       make api-docs
 
-!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png ""make api-docs" command with the file contents")
+!["make api-docs" command with the file contents](../assets/developer-guide/api-docs.png "make api-docs command with the file contents")
 
 Refresh custom resource definitions for Kubernetes. It allows the cluster to know what resources it deals with.
 
       make generate
 
-!["make generate" usage](../assets/developer-guide/make_generate.png ""make generate" usage")
+!["make generate" usage](../assets/developer-guide/make_generate.png "make generate usage")
 
 There are also manifests within operator that generate zz_generated.deepcopy.go file in /api/v1 directory. Update it and check if it looks properly. 
 
@@ -148,6 +148,6 @@ There are also manifests within operator that generate zz_generated.deepcopy.go 
 
 This is how "make manifests" works:
 
-!["make manifests" usage](../assets/developer-guide/make_manifests.png ""make manifests" usage")
+!["make manifests" usage](../assets/developer-guide/make_manifests.png "make manifests usage")
 
 That's it, you're all set! Good luck in coding.
