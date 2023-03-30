@@ -48,11 +48,11 @@ To improve security and streamline the login process, we have implemented the [R
 
 Furthermore, we are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of security. It is seamlessly integrated with Gerrit, Jenkins, SonarQube and Keycloak.
 
-In addition to this, we have introduced the ability to integrate OAuth2-Proxy, offering users an alternative to Keycloak-proxy. This feature offers greater choice and flexibility, enabling you to choose the authentication solution that works best for you. Better still, it can also be used as a separate EDP component if needed.
+In addition to this, we have introduced the ability to [integrate OAuth2-Proxy](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/), offering users an alternative to Keycloak-proxy. This feature offers greater choice and flexibility, enabling you to choose the authentication solution that works best for you. Better still, it can also be used as a separate EDP component if needed.
 
 Finally, we have integrated Kaniko to OpenShift internal registry, allowing users to build and store their container images with greater ease and efficiency. This integration offers a range of benefits, including faster build times and greater control over image management.
 
-We are excited to introduce a new section in our documentation called "Use Cases". This section has been thoughtfully designed to guide you through the most common scenarios for using EDP, helping you to gain a better understanding of how our platform can be utilized to its full potential. By reading through these use cases, you will be equipped with the knowledge and tools you need to make the most of EDP and build advanced, high-quality applications with ease.
+We are excited to introduce a new section in our documentation called ["Use Cases"](https://epam.github.io/edp-install/use-cases/). This section has been thoughtfully designed to guide you through the most common scenarios for using EDP, helping you to gain a better understanding of how our platform can be utilized to its full potential. By reading through these use cases, you will be equipped with the knowledge and tools you need to make the most of EDP and build advanced, high-quality applications with ease.
 
 Explore the upgrades, new functionality, breaking changes and improvements below.
 
