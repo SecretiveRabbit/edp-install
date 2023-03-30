@@ -44,7 +44,7 @@ What's New
 
 We seek to grant users opportunities to make their cutting-edge applications more advanced so we are thrilled to announce the release of our latest application version that comes packed with an array of exciting new features and enhancements. One of the major highlights of this release is the addition of support for the latest Java 17 language version. Furthermore, we have added support for the FastAPI and Flask frameworks for Python language. We have also included support for the .NET 6.0 framework for C# language. Last but not least, we have added support for Helm.
 
-To improve security and streamline the login process, we have implemented the [RBAC model](https://epam.github.io/edp-install/operator-guide/edp-access-model/?h=rbac#cluster-rbac-resources) for cluster login. This ensures that only authorized users can access the cluster, reducing the risk of unauthorized access and data breaches.
+To improve security and streamline the login process, we have implemented the [RBAC model](https://epam.github.io/edp-install/operator-guide/edp-access-model/?h=rbac#cluster-rbac-resources) for cluster login. This ensures that only authorized users can access the platform, reducing the risk of unauthorized access and data breaches.
 
 Furthermore, we are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of security. It is seamlessly integrated with Gerrit, Jenkins, SonarQube and Keycloak.
 
@@ -61,10 +61,10 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 * Keycloak is updated to the [20.0.3](https://www.keycloak.org/2023/01/keycloak-2003-released.html) version.
 * Operator SDK is updated to the [1.25.3](https://github.com/operator-framework/operator-sdk/releases) version.
-* Alpine image is updated to the 3.16.4 version. [EPMDEDP-11764](https://jiraeu.epam.com/browse/EPMDEDP-11764)
+* Alpine image is updated to the [3.16.4](https://hub.docker.com/_/alpine/tags?page=1&name=3.16.4) version. [EPMDEDP-11764](https://jiraeu.epam.com/browse/EPMDEDP-11764)
 * .NET is updated to the [6.0](https://support.microsoft.com/en-us/topic/-net-6-0-update-b85603d0-00d5-4aa4-adac-b045322d35fc) version.
 * Findbugs plugin version in SonarQube is updated to the [4.2.2](https://github.com/spotbugs/sonar-findbugs/releases/tag/4.2.2) version.
-* Our latest application version includes an upgrade to the upstream Headlamp version [0.16.0]((https://github.com/headlamp-k8s/headlamp/releases/tag/v0.16.0)), which is now the foundation for our platform.
+* Our latest application version includes an upgrade to the upstream Headlamp version [0.16.0](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.16.0), which is now the foundation for our platform.
 * Semgrep is updated to the [1.2.1](https://github.com/returntocorp/semgrep/blob/develop/CHANGELOG.md) version.
 * Argo CD is updated to the [2.5.8](https://github.com/argoproj/argo-cd/releases/tag/v2.5.8) version.
 
