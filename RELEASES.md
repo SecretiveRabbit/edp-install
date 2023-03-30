@@ -40,7 +40,7 @@ Get acquainted with the latest EDP releases.
 
 ## Version 3.2.0 <a name="2.12.2"></a> (March 31, 2023)
 
-What's New
+## What's New
 
 We seek to grant users opportunities to make their cutting-edge applications more advanced so we are thrilled to announce the release of our latest application version that comes packed with an array of exciting new features and enhancements. One of the major highlights of this release is the addition of support for the latest Java 17 language version. Furthermore, we have added support for the FastAPI and Flask frameworks for Python language. We have also included support for the .NET 6.0 framework for C# language. Last but not least, we have added support for Helm.
 
@@ -61,7 +61,7 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 * Keycloak is updated to the [20.0.3](https://www.keycloak.org/2023/01/keycloak-2003-released.html) version.
 * Operator SDK is updated to the [1.25.3](https://github.com/operator-framework/operator-sdk/releases) version.
-* Alpine image is updated to the [3.16.4](https://hub.docker.com/_/alpine/tags?page=1&name=3.16.4) version. [EPMDEDP-11764](https://jiraeu.epam.com/browse/EPMDEDP-11764)
+* Alpine image is updated to the [3.16.4](https://hub.docker.com/_/alpine/tags?page=1&name=3.16.4) version.
 * .NET is updated to the [6.0](https://support.microsoft.com/en-us/topic/-net-6-0-update-b85603d0-00d5-4aa4-adac-b045322d35fc) version.
 * Findbugs plugin version in SonarQube is updated to the [4.2.2](https://github.com/spotbugs/sonar-findbugs/releases/tag/4.2.2) version.
 * Our latest application version includes an upgrade to the upstream Headlamp version [0.16.0](https://github.com/headlamp-k8s/headlamp/releases/tag/v0.16.0), which is now the foundation for our platform.
@@ -84,7 +84,7 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 ### Enhancements
 
-* The 'Repository URL' field has been renamed to 'Forked from' for the cases of using clone strategy. [EPMDEDP-11326](https://jiraeu.epam.com/browse/EPMDEDP-11326)
+* The `Repository URL` field has been renamed to 'Forked from' for the cases of using clone strategy. [EPMDEDP-11326](https://jiraeu.epam.com/browse/EPMDEDP-11326)
 * Pipeline status is now displayed in Headlamp UI. [EPMDEDP-11338](https://jiraeu.epam.com/browse/EPMDEDP-11338)
 * The user is now able to onboard an application with custom build tool. [EPMDEDP-11361](https://jiraeu.epam.com/browse/EPMDEDP-11361)
 * Empty project button is now hidden if clone/import strategy is used. [EPMDEDP-11378](https://jiraeu.epam.com/browse/EPMDEDP-11378)
@@ -95,14 +95,14 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 * In the components overview list, icons have been provided for the language/framework/build tool/ci tool elements. [EPMDEDP-11505](https://jiraeu.epam.com/browse/EPMDEDP-11505)
 * Now user can run Quality Gate Pipeline run button when health status is green. [EPMDEDP-11510](https://jiraeu.epam.com/browse/EPMDEDP-11510)
 * Request-limit resource block is added to tasks. [EPMDEDP-11374](https://jiraeu.epam.com/browse/EPMDEDP-11374)
-* We have made the awsRegion parameter optional in order to eliminate the dependency on any specific cloud provider. [EPMDEDP-11605](https://jiraeu.epam.com/browse/EPMDEDP-11605)
+* We have made the `awsRegion` parameter optional in order to eliminate the dependency on any specific cloud provider. [EPMDEDP-11605](https://jiraeu.epam.com/browse/EPMDEDP-11605)
 * The process of handing out rights to OpenShift has been changed. [EPMDEDP-11610](https://jiraeu.epam.com/browse/EPMDEDP-11610)
-* The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10). [EPMDEDP-11606](https://jiraeu.epam.com/browse/EPMDEDP-11606) align/optimized okd 4.10
+* The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10). [EPMDEDP-11606](https://jiraeu.epam.com/browse/EPMDEDP-11606)
 
 
 ### Bug Fixes
 
-* Change icon for docker-registry on overview page. [EPMDEDP-11461](https://jiraeu.epam.com/browse/EPMDEDP-11461) check
+* Change icon for docker-registry on overview page. [EPMDEDP-11461](https://jiraeu.epam.com/browse/EPMDEDP-11461)
 * From now on, the `Git repo relative path` field is checked for uniqueness when creating application. [EPMDEDP-10945](https://jiraeu.epam.com/browse/EPMDEDP-10945)
 * The codebasebranch is now validated for correctness. [EPMDEDP-11189](https://jiraeu.epam.com/browse/EPMDEDP-11189)
 * From now on, the operator will continuously update the status of the codebase branch. [EPMDEDP-11357](https://jiraeu.epam.com/browse/EPMDEDP-11357)
@@ -113,7 +113,6 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 * Now Headlamp displays icons depending on the deployed CI tool. [EPMDEDP-11532](https://jiraeu.epam.com/browse/EPMDEDP-11532)
 * Fix create resource yaml editor editing sync with forms. [EPMDEDP-11596](https://jiraeu.epam.com/browse/EPMDEDP-11596)
 * The issue of adding an incorrect Groovy pipeline library branch is fixed. [EPMDEDP-11603](https://jiraeu.epam.com/browse/EPMDEDP-11603)
-* Groovy-lib branch metadata name is replaced to spec branchName. [EPMDEDP-11603](https://jiraeu.epam.com/browse/EPMDEDP-11603)
 * For default versioning for go applications, the application version is formed in a different way. [EPMDEDP-11689](https://jiraeu.epam.com/browse/EPMDEDP-11689)
 * Running pipelines triggers only those pipelines that were onboarded in EDP. [EPMDEDP-11714](https://jiraeu.epam.com/browse/EPMDEDP-11714)
 * Now pipeline deletion clears all the service data associated with it. [EPMDEDP-11668](https://jiraeu.epam.com/browse/EPMDEDP-11668)
