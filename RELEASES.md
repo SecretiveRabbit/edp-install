@@ -44,13 +44,13 @@ Get acquainted with the latest EDP releases.
 
 We seek to grant users opportunities to make their cutting-edge applications more advanced so we are thrilled to announce the release of our latest application version that comes packed with an array of exciting new features and enhancements. One of the major highlights of this release is the addition of support for the latest Java 17 language version. Furthermore, we have added support for the FastAPI and Flask frameworks for Python language. We have also included support for the .NET 6.0 framework for C# language. Last but not least, we have added support for Helm.
 
-To improve security and streamline the login process, we have implemented the [RBAC model](https://epam.github.io/edp-install/operator-guide/edp-access-model/?h=rbac#cluster-rbac-resources) for cluster login. This ensures that only authorized users can access the platform, reducing the risk of unauthorized access and data breaches.
+To improve security and streamline the login process, we have implemented the [RBAC model](https://epam.github.io/edp-install/operator-guide/edp-access-model/?h=rbac#cluster-rbac-resources) for cluster login. Thus, we have enriched this with more granular permissions.
 
-Furthermore, we are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of security. It is seamlessly integrated with Gerrit, Jenkins, SonarQube and Keycloak.
+We are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of flexibility. It is seamlessly integrated with EDP Components.
 
-In addition to this, we have introduced the ability to [integrate OAuth2-Proxy](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/), offering users an alternative to Keycloak-proxy. This feature offers greater choice and flexibility, enabling you to choose the authentication solution that works best for you. Better still, it can also be used as a separate EDP component if needed.
+In addition to this, we have introduced the ability to enable [Single Sign-On](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/) for the services (applications) that do not support OIDC from the box. This feature offers greater choice and flexibility, enabling you to choose the authentication solution that works best for you.
 
-Finally, we have integrated Kaniko to OpenShift internal registry, allowing users to build and store their container images with greater ease and efficiency. This integration offers a range of benefits, including faster build times and greater control over image management.
+We have integrated Kaniko to OpenShift internal registry, allowing users to build and store their container images with greater ease and efficiency. This integration offers a range of benefits, including faster build times and greater control over image for OpenShift users.
 
 We are excited to introduce a new section in our documentation called ["Use Cases"](https://epam.github.io/edp-install/use-cases/). This section has been thoughtfully designed to guide you through the most common scenarios for using EDP, helping you to gain a better understanding of how our platform can be utilized to its full potential. By reading through these use cases, you will be equipped with the knowledge and tools you need to make the most of EDP and build advanced, high-quality applications with ease.
 
@@ -71,32 +71,32 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 ### New Features
 * We are pleased to announce that all components of our program have been thoroughly tested and are fully supported in OpenShift. [EPMDEDP-11588](https://jiraeu.epam.com/browse/EPMDEDP-11588)
-* The method of logging in the codebase operator has been revised.  [EPMDEDP-11597](https://jiraeu.epam.com/browse/EPMDEDP-11597)
-* The `VERSION` file creation for Go codebases has been removed. [EPMDEDP-11598](https://jiraeu.epam.com/browse/EPMDEDP-11598)
+* The method of logging in the codebase operator is revised.  [EPMDEDP-11597](https://jiraeu.epam.com/browse/EPMDEDP-11597)
+* The `VERSION` file creation for Go codebases is removed. [EPMDEDP-11598](https://jiraeu.epam.com/browse/EPMDEDP-11598)
 * Read-only mode in tekton-dashboard is now available. [EPMDEDP-11467](https://jiraeu.epam.com/browse/EPMDEDP-11467)
 * Cd-pipeline-operator now manages projects instead of namespaces on OpenShift. [EPMDEDP-11441](https://jiraeu.epam.com/browse/EPMDEDP-11441)
 * Kiosk integration when using OpenShift cluster is removed. [EPMDEDP-11489](https://jiraeu.epam.com/browse/EPMDEDP-11489)
 * The `cp-pipeline-operator` is now responsible for RBAC in the created namespaces. [EPMDEDP-11528](https://jiraeu.epam.com/browse/EPMDEDP-11528)
-* The ability to set constant requeue time in GroupMember reconciler is added to master branch. [EPMDEDP-11690](https://jiraeu.epam.com/browse/EPMDEDP-11690)
+* The ability to set constant requeue time in GroupMember reconciler is added. [EPMDEDP-11690](https://jiraeu.epam.com/browse/EPMDEDP-11690)
 * Add monitoring and logging stack to the helmfile. [EPMDEDP-11418](https://jiraeu.epam.com/browse/EPMDEDP-11418)
 * Health check for Headlamp deployment is added. [EPMDEDP-11576](https://jiraeu.epam.com/browse/EPMDEDP-11576)
 
 
 ### Enhancements
 
-* The `Repository URL` field has been renamed to 'Forked from' for the cases of using clone strategy. [EPMDEDP-11326](https://jiraeu.epam.com/browse/EPMDEDP-11326)
+* The `Repository URL` field is renamed to 'Forked from' for the cases of using clone strategy. [EPMDEDP-11326](https://jiraeu.epam.com/browse/EPMDEDP-11326)
 * Pipeline status is now displayed in Headlamp UI. [EPMDEDP-11338](https://jiraeu.epam.com/browse/EPMDEDP-11338)
 * The user is now able to onboard an application with custom build tool. [EPMDEDP-11361](https://jiraeu.epam.com/browse/EPMDEDP-11361)
 * Empty project button is now hidden if clone/import strategy is used. [EPMDEDP-11378](https://jiraeu.epam.com/browse/EPMDEDP-11378)
 * Commit validation functionality is available without JIRA integration. [EPMDEDP-11433](https://jiraeu.epam.com/browse/EPMDEDP-11433)
 * From now, custom resource status description is displayed when status is failed. [EPMDEDP-11439](https://jiraeu.epam.com/browse/EPMDEDP-11439)
 * The update/uninstall buttons when pipeline run is in "running" status have been disabled. [EPMDEDP-11476](https://jiraeu.epam.com/browse/EPMDEDP-11476)
-* The `Last time updated` field has been removed form codebaseBranch info. [EPMDEDP-11503](https://jiraeu.epam.com/browse/EPMDEDP-11503)
+* The `Last time updated` field has been removed form Headlamp codebaseBranch info. [EPMDEDP-11503](https://jiraeu.epam.com/browse/EPMDEDP-11503)
 * In the components overview list, icons have been provided for the language/framework/build tool/ci tool elements. [EPMDEDP-11505](https://jiraeu.epam.com/browse/EPMDEDP-11505)
 * Now user can run Quality Gate Pipeline run button when health status is green. [EPMDEDP-11510](https://jiraeu.epam.com/browse/EPMDEDP-11510)
 * Request-limit resource block is added to tasks. [EPMDEDP-11374](https://jiraeu.epam.com/browse/EPMDEDP-11374)
 * We have made the `awsRegion` parameter optional in order to eliminate the dependency on any specific cloud provider. [EPMDEDP-11605](https://jiraeu.epam.com/browse/EPMDEDP-11605)
-* The process of handing out rights to OpenShift has been changed. [EPMDEDP-11610](https://jiraeu.epam.com/browse/EPMDEDP-11610)
+* The process of handing out permissions to OpenShift has been improved. [EPMDEDP-11610](https://jiraeu.epam.com/browse/EPMDEDP-11610)
 * The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10). [EPMDEDP-11606](https://jiraeu.epam.com/browse/EPMDEDP-11606)
 
 
@@ -104,8 +104,7 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 * Change icon for docker-registry on overview page. [EPMDEDP-11461](https://jiraeu.epam.com/browse/EPMDEDP-11461)
 * From now on, the `Git repo relative path` field is checked for uniqueness when creating application. [EPMDEDP-10945](https://jiraeu.epam.com/browse/EPMDEDP-10945)
-* The codebasebranch is now validated for correctness. [EPMDEDP-11189](https://jiraeu.epam.com/browse/EPMDEDP-11189)
-* From now on, the operator will continuously update the status of the codebase branch. [EPMDEDP-11357](https://jiraeu.epam.com/browse/EPMDEDP-11357)
+* The field `From Commit Hash` in Headlamp is now validated to ensure that the entered commit hash exists so now users can not enter any numbers in the field. [EPMDEDP-11189](https://jiraeu.epam.com/browse/EPMDEDP-11189)
 * App list rendering has been optimized. [EPMDEDP-11670](https://jiraeu.epam.com/browse/EPMDEDP-11670)
 * Resource details page crashes when resource has no status. [EPMDEDP-11712](https://jiraeu.epam.com/browse/EPMDEDP-11712)
 * Branch versioning when EDP versioning is fixed. [EPMDEDP-11455](https://jiraeu.epam.com/browse/EPMDEDP-11455)
@@ -350,7 +349,7 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 * Go version in all EDP operators are updated to the 1.18.4 version, please refer to the [official website](https://go.dev/doc/devel/release#go1.18).
 * Kaniko images are updated to the 1.8.1 version, please refer to the [official website](https://newreleases.io/project/github/GoogleContainerTools/kaniko/release/v1.8.1).
 
-### New Functionalit
+### New Functionality
 
 * Now it is possible to use External Secrets Operator.
 * The SAST Static security analysis testing, namely the DefectDojo component, is installed as a part of the EDP ecosystem.
@@ -1297,4 +1296,3 @@ Please refer to the [Application Info](https://github.com/epam/edp-admin-console
 * The [EDP Overview](https://github.com/epam/edp-install/tree/master#epam-delivery-platform-rocket) page is updated.
 * The [EDP Pipeline Framework](https://github.com/epam/edp-admin-console/blob/master/documentation/cicd_customization/edp_pipeline_framework.md#edp-pipeline-framework) page is added.
 * The [Keycloak Installation on Kubernetes](https://github.com/epam/edp-install/blob/master/documentation/install_keycloak.md) page is updated.
-
