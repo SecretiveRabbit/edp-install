@@ -6,10 +6,7 @@ Get acquainted with the latest EDP releases.
 * [Version 3.2.0](#3.2.0)
 * [Version 3.1.0](#3.1.0)
 * [Version 3.0.0](#3.0.0)
-* [Version 2.12.2](#2.12.2)
-* [Version 2.12.1](#2.12.1)
-* [Version 2.12.0](#2.12.0)
-* [Version 2.11.0](#2.11.0)
+
 <details>
   <summary>Earlier Versions</summary>
 
@@ -35,6 +32,10 @@ Get acquainted with the latest EDP releases.
 * [Version 2.6.2](#2.6.2)
 * [Version 2.6.1](#2.6.1)
 * [Version 2.6.0](#2.6.0)
+* [Version 2.12.2](#2.12.2)
+* [Version 2.12.1](#2.12.1)
+* [Version 2.12.0](#2.12.0)
+* [Version 2.11.0](#2.11.0)
 </details>
 
 
