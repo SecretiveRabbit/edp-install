@@ -54,7 +54,7 @@ We have integrated Kaniko to OpenShift internal registry, allowing users to buil
 
 We are excited to introduce a new section in our documentation called ["Use Cases"](https://epam.github.io/edp-install/use-cases/). This section has been thoughtfully designed to guide you through the most common scenarios for using EDP, helping you to gain a better understanding of how our platform can be utilized to its full potential. By reading through these use cases, you will be equipped with the knowledge and tools you need to make the most of EDP and build advanced, high-quality applications with ease.
 
-Explore the upgrades, new functionality, breaking changes and improvements below.
+Explore the upgrades, new functionality and improvements below.
 
 
 ### Upgrades
@@ -69,7 +69,7 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 * Argo CD is updated to the [2.5.8](https://github.com/argoproj/argo-cd/releases/tag/v2.5.8) version.
 
 
-### New Features
+### New Functionality
 
 * We are pleased to announce that all components of our program have been thoroughly tested and are fully supported in OpenShift.
 * The method of logging in the codebase operator is revised.
