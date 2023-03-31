@@ -3,6 +3,7 @@
 ## Overview
 
 Get acquainted with the latest EDP releases.
+* [Version 3.2.1](#3.2.1)
 * [Version 3.2.0](#3.2.0)
 * [Version 3.1.0](#3.1.0)
 * [Version 3.0.0](#3.0.0)
@@ -10,6 +11,10 @@ Get acquainted with the latest EDP releases.
 <details>
   <summary>Earlier Versions</summary>
 
+* [Version 2.12.2](#2.12.2)
+* [Version 2.12.1](#2.12.1)
+* [Version 2.12.0](#2.12.0)
+* [Version 2.11.0](#2.11.0)
 * [Version 2.10.2](#2.10.2)
 * [Version 2.10.1](#2.10.1)
 * [Version 2.10.0](#2.10.0)
@@ -32,14 +37,20 @@ Get acquainted with the latest EDP releases.
 * [Version 2.6.2](#2.6.2)
 * [Version 2.6.1](#2.6.1)
 * [Version 2.6.0](#2.6.0)
-* [Version 2.12.2](#2.12.2)
-* [Version 2.12.1](#2.12.1)
-* [Version 2.12.0](#2.12.0)
-* [Version 2.11.0](#2.11.0)
 </details>
 
+## Version 3.2.1 <a name="3.2.1"></a> (March 31, 2023)
 
-## Version 3.2.0 <a name="3.2.0"></a> (March 31, 2023)
+### New Functionality
+
+* The ability of using custom certificates is added to nexus-operator OAuth2-Proxy.
+* The ability of using custom certificates is added to edp-install OAuth2-Proxy.
+
+### Fixed Issues
+
+* Remove the unused RoleBinding for jenkins-operator for OpenShift deploy scenario.
+
+## Version 3.2.0 <a name="3.2.0"></a> (March 26, 2023)
 
 ## What's New
 
@@ -49,7 +60,7 @@ To improve security and streamline the login process, we have implemented the [R
 
 We are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of flexibility. It is seamlessly integrated with EDP Components.
 
-In addition to this, we have introduced the ability to enable [Single Sign-On](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/) for the services (applications) that do not support OIDC from the box. This feature offers greater choice and flexibility, enabling you to choose the authentication solution that works best for you.
+In addition to this, we have introduced the ability to enable [Single Sign-On](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/) for the services (applications) that do not support OIDC from the box. This feature offers greater choice and flexibility, enabling you to choose the optimal authentication solution.
 
 We have integrated Kaniko to OpenShift internal registry, allowing users to build and store their container images with greater ease and efficiency. This integration offers a range of benefits, including faster build times and greater control over image for OpenShift users.
 
