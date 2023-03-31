@@ -38,7 +38,7 @@ Get acquainted with the latest EDP releases.
 </details>
 
 
-## Version 3.2.0 <a name="2.12.2"></a> (March 31, 2023)
+## Version 3.2.0 <a name="3.2.0"></a> (March 31, 2023)
 
 ## What's New
 
@@ -101,7 +101,7 @@ Explore the upgrades, new functionality and improvements below.
 * The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10).
 
 
-### Bug Fixes
+### Fixed Issues
 
 * Change icon for docker-registry on overview page.
 * From now on, the `Git repo relative path` field is checked for uniqueness when creating application.
