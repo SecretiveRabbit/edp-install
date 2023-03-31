@@ -70,51 +70,52 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 
 
 ### New Features
-* We are pleased to announce that all components of our program have been thoroughly tested and are fully supported in OpenShift. [EPMDEDP-11588](https://jiraeu.epam.com/browse/EPMDEDP-11588)
-* The method of logging in the codebase operator is revised.  [EPMDEDP-11597](https://jiraeu.epam.com/browse/EPMDEDP-11597)
-* The `VERSION` file creation for Go codebases is removed. [EPMDEDP-11598](https://jiraeu.epam.com/browse/EPMDEDP-11598)
-* Read-only mode in tekton-dashboard is now available. [EPMDEDP-11467](https://jiraeu.epam.com/browse/EPMDEDP-11467)
-* Cd-pipeline-operator now manages projects instead of namespaces on OpenShift. [EPMDEDP-11441](https://jiraeu.epam.com/browse/EPMDEDP-11441)
-* Kiosk integration when using OpenShift cluster is removed. [EPMDEDP-11489](https://jiraeu.epam.com/browse/EPMDEDP-11489)
-* The `cp-pipeline-operator` is now responsible for RBAC in the created namespaces. [EPMDEDP-11528](https://jiraeu.epam.com/browse/EPMDEDP-11528)
-* The ability to set constant requeue time in GroupMember reconciler is added. [EPMDEDP-11690](https://jiraeu.epam.com/browse/EPMDEDP-11690)
-* Add monitoring and logging stack to the helmfile. [EPMDEDP-11418](https://jiraeu.epam.com/browse/EPMDEDP-11418)
-* Health check for Headlamp deployment is added. [EPMDEDP-11576](https://jiraeu.epam.com/browse/EPMDEDP-11576)
+
+* We are pleased to announce that all components of our program have been thoroughly tested and are fully supported in OpenShift.
+* The method of logging in the codebase operator is revised.
+* The `VERSION` file creation for Go codebases is removed.
+* Read-only mode in tekton-dashboard is now available.
+* Cd-pipeline-operator now manages projects instead of namespaces on OpenShift.
+* Kiosk integration when using OpenShift cluster is removed.
+* The `cp-pipeline-operator` is now responsible for RBAC in the created namespaces.
+* The ability to set constant requeue time in GroupMember reconciler is added.
+* Add monitoring and logging stack to the helmfile.
+* Health check for Headlamp deployment is added.
 
 
 ### Enhancements
 
-* The `Repository URL` field is renamed to 'Forked from' for the cases of using clone strategy. [EPMDEDP-11326](https://jiraeu.epam.com/browse/EPMDEDP-11326)
-* Pipeline status is now displayed in Headlamp UI. [EPMDEDP-11338](https://jiraeu.epam.com/browse/EPMDEDP-11338)
-* The user is now able to onboard an application with custom build tool. [EPMDEDP-11361](https://jiraeu.epam.com/browse/EPMDEDP-11361)
-* Empty project button is now hidden if clone/import strategy is used. [EPMDEDP-11378](https://jiraeu.epam.com/browse/EPMDEDP-11378)
-* Commit validation functionality is available without JIRA integration. [EPMDEDP-11433](https://jiraeu.epam.com/browse/EPMDEDP-11433)
-* From now, custom resource status description is displayed when status is failed. [EPMDEDP-11439](https://jiraeu.epam.com/browse/EPMDEDP-11439)
-* The update/uninstall buttons when pipeline run is in "running" status have been disabled. [EPMDEDP-11476](https://jiraeu.epam.com/browse/EPMDEDP-11476)
-* The `Last time updated` field has been removed form Headlamp codebaseBranch info. [EPMDEDP-11503](https://jiraeu.epam.com/browse/EPMDEDP-11503)
-* In the components overview list, icons have been provided for the language/framework/build tool/ci tool elements. [EPMDEDP-11505](https://jiraeu.epam.com/browse/EPMDEDP-11505)
-* Now user can run Quality Gate Pipeline run button when health status is green. [EPMDEDP-11510](https://jiraeu.epam.com/browse/EPMDEDP-11510)
-* Request-limit resource block is added to tasks. [EPMDEDP-11374](https://jiraeu.epam.com/browse/EPMDEDP-11374)
-* We have made the `awsRegion` parameter optional in order to eliminate the dependency on any specific cloud provider. [EPMDEDP-11605](https://jiraeu.epam.com/browse/EPMDEDP-11605)
-* The process of handing out permissions to OpenShift has been improved. [EPMDEDP-11610](https://jiraeu.epam.com/browse/EPMDEDP-11610)
-* The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10). [EPMDEDP-11606](https://jiraeu.epam.com/browse/EPMDEDP-11606)
+* The `Repository URL` field is renamed to 'Forked from' for the cases of using clone strategy.
+* Pipeline status is now displayed in Headlamp UI.
+* The user is now able to onboard an application with custom build tool.
+* Empty project button is now hidden if clone/import strategy is used.
+* Commit validation functionality is available without JIRA integration.
+* From now, custom resource status description is displayed when status is failed.
+* The update/uninstall buttons when pipeline run is in "running" status have been disabled.
+* The `Last time updated` field has been removed form Headlamp codebaseBranch info.
+* In the components overview list, icons have been provided for the language/framework/build tool/ci tool elements.
+* Now user can run Quality Gate Pipeline run button when health status is green.
+* Request-limit resource block is added to tasks.
+* We have made the `awsRegion` parameter optional in order to eliminate the dependency on any specific cloud provider.
+* The process of handing out permissions to OpenShift has been improved.
+* The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10).
 
 
 ### Bug Fixes
 
-* Change icon for docker-registry on overview page. [EPMDEDP-11461](https://jiraeu.epam.com/browse/EPMDEDP-11461)
-* From now on, the `Git repo relative path` field is checked for uniqueness when creating application. [EPMDEDP-10945](https://jiraeu.epam.com/browse/EPMDEDP-10945)
-* The field `From Commit Hash` in Headlamp is now validated to ensure that the entered commit hash exists so now users can not enter any numbers in the field. [EPMDEDP-11189](https://jiraeu.epam.com/browse/EPMDEDP-11189)
-* App list rendering has been optimized. [EPMDEDP-11670](https://jiraeu.epam.com/browse/EPMDEDP-11670)
-* Resource details page crashes when resource has no status. [EPMDEDP-11712](https://jiraeu.epam.com/browse/EPMDEDP-11712)
-* Branch versioning when EDP versioning is fixed. [EPMDEDP-11455](https://jiraeu.epam.com/browse/EPMDEDP-11455)
-* The crash when adding empty codebase to CD Pipelines is fixed. [EPMDEDP-11475](https://jiraeu.epam.com/browse/EPMDEDP-11475)
-* Now Headlamp displays icons depending on the deployed CI tool. [EPMDEDP-11532](https://jiraeu.epam.com/browse/EPMDEDP-11532)
-* Fix create resource yaml editor editing sync with forms. [EPMDEDP-11596](https://jiraeu.epam.com/browse/EPMDEDP-11596)
-* The issue of adding an incorrect Groovy pipeline library branch is fixed. [EPMDEDP-11603](https://jiraeu.epam.com/browse/EPMDEDP-11603)
-* For default versioning for go applications, the application version is formed in a different way. [EPMDEDP-11689](https://jiraeu.epam.com/browse/EPMDEDP-11689)
-* Running pipelines triggers only those pipelines that were onboarded in EDP. [EPMDEDP-11714](https://jiraeu.epam.com/browse/EPMDEDP-11714)
-* Now pipeline deletion clears all the service data associated with it. [EPMDEDP-11668](https://jiraeu.epam.com/browse/EPMDEDP-11668)
+* Change icon for docker-registry on overview page.
+* From now on, the `Git repo relative path` field is checked for uniqueness when creating application.
+* The field `From Commit Hash` in Headlamp is now validated to ensure that the entered commit hash exists so now users can not enter any numbers in the field.
+* App list rendering has been optimized.
+* Resource details page crashes when resource has no status.
+* Branch versioning when EDP versioning is fixed.
+* The crash when adding empty codebase to CD Pipelines is fixed.
+* Now Headlamp displays icons depending on the deployed CI tool.
+* Fix create resource yaml editor editing sync with forms.
+* The issue of adding an incorrect Groovy pipeline library branch is fixed.
+* For default versioning for go applications, the application version is formed in a different way.
+* Running pipelines triggers only those pipelines that were onboarded in EDP.
+* Now pipeline deletion clears all the service data associated with it.
 
 
 ### Documentation
@@ -122,36 +123,36 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 * The [EDP RoadMap](https://epam.github.io/edp-install/roadmap/#roadmap) page is updated.
 
 * The [Use Cases](https://epam.github.io/edp-install/use-cases/) is updated with the following:
-  * The [Scaffold and Deploy FastAPI Application](https://epam.github.io/edp-install/use-cases/application-scaffolding/) page is added. [EPMDEDP-11415](https://jiraeu.epam.com/browse/EPMDEDP-11415)
+  * The [Scaffold and Deploy FastAPI Application](https://epam.github.io/edp-install/use-cases/application-scaffolding/) page is added.
   * The [Deploy Application With Custom Build Tool/Framework](https://epam.github.io/edp-install/use-cases/tekton-custom-pipelines/) page is added.
 
 * The [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/) is updated with the following:
-  * The Headlamp User Guide tab is renamed to [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/). [EPMDEDP-11238](https://jiraeu.epam.com/browse/EPMDEDP-11238)
-  * The [Headlamp OIDC Integration](https://epam.github.io/edp-install/operator-guide/headlamp-oidc/) page is added. [EPMDEDP-11135](https://jiraeu.epam.com/browse/EPMDEDP-11135)
-  * The [Add Quality Gate](https://epam.github.io/edp-install/headlamp-user-guide/add-quality-gate/) page is added. [EPMDEDP-11395](https://jiraeu.epam.com/browse/EPMDEDP-11395)
-  * The [Add Application](https://epam.github.io/edp-install/headlamp-user-guide/add-application/) page is added. [EPMDEDP-11558](https://jiraeu.epam.com/browse/EPMDEDP-11558)
+  * The Headlamp User Guide tab is renamed to [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/).
+  * The [Headlamp OIDC Integration](https://epam.github.io/edp-install/operator-guide/headlamp-oidc/) page is added.
+  * The [Add Quality Gate](https://epam.github.io/edp-install/headlamp-user-guide/add-quality-gate/) page is added.
+  * The [Add Application](https://epam.github.io/edp-install/headlamp-user-guide/add-application/) page is added.
 
 * The [Operator Guide](https://epam.github.io/edp-install/operator-guide/) is updated with the following:
-  * The [Report-Portal integration](https://epam.github.io/edp-install/operator-guide/report-portal-integration-tekton/) page is added. [EPMDEDP-11645](https://jiraeu.epam.com/browse/EPMDEDP-11645)
-  * The [Tekton Overview](https://epam.github.io/edp-install/operator-guide/tekton-overview/) page is added. [EPMDEDP-10634](https://jiraeu.epam.com/browse/EPMDEDP-10634)
-  * The [Upgrade EDP v2.12 to 3.0](https://epam.github.io/edp-install/operator-guide/upgrade-edp-3.0/) page is updated. [EPMDEDP-11260](https://jiraeu.epam.com/browse/EPMDEDP-11260)
-  * The [Argo CD Integration](https://epam.github.io/edp-install/operator-guide/argocd-integration/) page is updated. [EPMDEDP-11299](https://jiraeu.epam.com/browse/EPMDEDP-11299)
-  * The [Install Amazon EBS CSI Driver](https://epam.github.io/edp-install/operator-guide/ebs-csi-driver/) page is added. [EPMDEDP-11319](https://jiraeu.epam.com/browse/EPMDEDP-11319)
-  * The [Migrate CI Pipelines From Jenkins to Tekton](https://epam.github.io/edp-install/operator-guide/migrate-ci-pipelines-from-jenkins-to-tekton/) page is added. [EPMDEDP-11335](https://jiraeu.epam.com/browse/EPMDEDP-11335)
-  * The [Install Keycloak](https://epam.github.io/edp-install/operator-guide/install-keycloak/) page is updated. [EPMDEDP-11413](https://jiraeu.epam.com/browse/EPMDEDP-11413)
-  * The [Monitoring](https://epam.github.io/edp-install/operator-guide/tekton-monitoring/) page is added. [EPMDEDP-11517](https://jiraeu.epam.com/browse/EPMDEDP-11517)
-  * The [EDP Installation Prerequisites Overview](https://epam.github.io/edp-install/operator-guide/prerequisites/) page is updated. [EPMDEDP-11568](https://jiraeu.epam.com/browse/EPMDEDP-11568)
-  * The [Set Up Kubernetes](https://epam.github.io/edp-install/operator-guide/kubernetes-cluster-settings/) page is updated. [EPMDEDP-11613](https://jiraeu.epam.com/browse/EPMDEDP-11613)
-  * The [Manage Custom Certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) page is added. [EPMDEDP-11625](https://jiraeu.epam.com/browse/EPMDEDP-11625)
-  * The [Protect Endpoints](https://epam.github.io/edp-install/operator-guide/oauth2-proxy) page is added. [EPMDEDP-11693](https://jiraeu.epam.com/browse/EPMDEDP-11693)
+  * The [Report-Portal integration](https://epam.github.io/edp-install/operator-guide/report-portal-integration-tekton/) page is added.
+  * The [Tekton Overview](https://epam.github.io/edp-install/operator-guide/tekton-overview/) page is added.
+  * The [Upgrade EDP v2.12 to 3.0](https://epam.github.io/edp-install/operator-guide/upgrade-edp-3.0/) page is updated.
+  * The [Argo CD Integration](https://epam.github.io/edp-install/operator-guide/argocd-integration/) page is updated.
+  * The [Install Amazon EBS CSI Driver](https://epam.github.io/edp-install/operator-guide/ebs-csi-driver/) page is added.
+  * The [Migrate CI Pipelines From Jenkins to Tekton](https://epam.github.io/edp-install/operator-guide/migrate-ci-pipelines-from-jenkins-to-tekton/) page is added.
+  * The [Install Keycloak](https://epam.github.io/edp-install/operator-guide/install-keycloak/) page is updated.
+  * The [Monitoring](https://epam.github.io/edp-install/operator-guide/tekton-monitoring/) page is added.
+  * The [EDP Installation Prerequisites Overview](https://epam.github.io/edp-install/operator-guide/prerequisites/) page is updated.
+  * The [Set Up Kubernetes](https://epam.github.io/edp-install/operator-guide/kubernetes-cluster-settings/) page is updated.
+  * The [Manage Custom Certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) page is added.
+  * The [Protect Endpoints](https://epam.github.io/edp-install/operator-guide/oauth2-proxy) page is added.
 
 * The [Developer Guide](https://epam.github.io/edp-install/developer-guide/) is updated with the following:
-  * The Local Development Guide page is updated and renamed to [Workspace Setup Manual](https://epam.github.io/edp-install/developer-guide/local-development/). [EPMDEDP-11364](https://jiraeu.epam.com/browse/EPMDEDP-11364)
+  * The Local Development Guide page is updated and renamed to [Workspace Setup Manual](https://epam.github.io/edp-install/developer-guide/local-development/).
 
 * The [Getting Started](https://epam.github.io/edp-install/overview/) is updated with the following:
-  * The [EDP Overview](https://epam.github.io/edp-install/#epam-delivery-platform) page is updated. [EPMDEDP-10808](https://jiraeu.epam.com/browse/EPMDEDP-10808)
-  * The [Quick Start](https://epam.github.io/edp-install/getting-started/) page is updated. [EPMDEDP-11599](https://jiraeu.epam.com/browse/EPMDEDP-11599)
-  * The [Supported Versions and Compatibility](https://epam.github.io/edp-install/supported-versions/) page is added. [EPMDEDP-11618](https://jiraeu.epam.com/browse/EPMDEDP-11618)
+  * The [EDP Overview](https://epam.github.io/edp-install/#epam-delivery-platform) page is updated.
+  * The [Quick Start](https://epam.github.io/edp-install/getting-started/) page is updated.
+  * The [Supported Versions and Compatibility](https://epam.github.io/edp-install/supported-versions/) page is added.
 
 ## Version 3.1.0 <a name="3.1.0"></a> (January 24, 2023)
 
