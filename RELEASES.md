@@ -68,7 +68,6 @@ We are excited to introduce a new section in our documentation called ["Use Case
 
 Explore the upgrades, new functionality and improvements below.
 
-
 ### Upgrades
 
 * Keycloak is updated to the [20.0.3](https://www.keycloak.org/2023/01/keycloak-2003-released.html) version.
@@ -80,11 +79,8 @@ Explore the upgrades, new functionality and improvements below.
 * Semgrep is updated to the [1.2.1](https://github.com/returntocorp/semgrep/blob/develop/CHANGELOG.md) version.
 * Argo CD is updated to the [2.5.8](https://github.com/argoproj/argo-cd/releases/tag/v2.5.8) version.
 
-
 ### New Functionality
 
-* We are pleased to announce that all components of our program have been thoroughly tested and are fully supported in OpenShift.
-* The method of logging in the codebase operator is revised.
 * The `VERSION` file creation for Go codebases is removed.
 * Read-only mode in tekton-dashboard is now available.
 * Cd-pipeline-operator now manages projects instead of namespaces on OpenShift.
@@ -94,24 +90,21 @@ Explore the upgrades, new functionality and improvements below.
 * Add monitoring and logging stack to the helmfile.
 * Health check for Headlamp deployment is added.
 
-
 ### Enhancements
 
-* The `Repository URL` field is renamed to 'Forked from' for the cases of using clone strategy.
-* Pipeline status is now displayed in Headlamp UI.
+* In Headlamp UI, the `Repository URL` field is renamed to 'Forked from' for the cases of using clone strategy.
+* Tekton pipelines are now available in Headlamp UI.
 * The user is now able to onboard an application with custom build tool.
 * Empty project button is now hidden if clone/import strategy is used.
 * Commit validation functionality is available without JIRA integration.
-* From now, custom resource status description is displayed when status is failed.
-* The update/uninstall buttons when pipeline run is in "running" status have been disabled.
-* The `Last time updated` field has been removed form Headlamp codebaseBranch info.
+* Error message of reconciliation is available over status in case of failure in Headlamp UI.
+* The update/uninstall buttons when deploy pipeline run is in "running" status have been disabled.
+* The `Last time updated` field has been removed from Headlamp codebaseBranch info.
 * In the components overview list, icons have been provided for the language/framework/build tool/ci tool elements.
-* Now user can run Quality Gate Pipeline run button when health status is green.
-* Request-limit resource block is added to tasks.
+* The Quality Gate Pipeline can now be run by the user only when the health status is green.
+* Request-limit resource block is added to Tekton tasks.
 * We have made the `awsRegion` parameter optional in order to eliminate the dependency on any specific cloud provider.
-* The process of handing out permissions to OpenShift has been improved.
 * The deployment of EDP has been aligned with the requirements of the OpenShift cluster (OKD 4.10).
-
 
 ### Fixed Issues
 
@@ -120,15 +113,6 @@ Explore the upgrades, new functionality and improvements below.
 * The field `From Commit Hash` in Headlamp is now validated to ensure that the entered commit hash exists so now users can not enter any numbers in the field.
 * App list rendering has been optimized.
 * Resource details page crashes when resource has no status.
-* Branch versioning when EDP versioning is fixed.
-* The crash when adding empty codebase to CD Pipelines is fixed.
-* Now Headlamp displays icons depending on the deployed CI tool.
-* Fix create resource yaml editor editing sync with forms.
-* The issue of adding an incorrect Groovy pipeline library branch is fixed.
-* For default versioning for go applications, the application version is formed in a different way.
-* Running pipelines triggers only those pipelines that were onboarded in EDP.
-* Now pipeline deletion clears all the service data associated with it.
-
 
 ### Documentation
 
@@ -320,7 +304,6 @@ Explore the upgrades, new functionality, breaking changes and improvements below
 ### Fixed Issues
 
 * Fix Gerrit project syncer and controller conflict in the Gerrit Operator to reduce the delay during the multiple projects sync.
-* Fix Jira project info error handler to work correctly with non-existing tickets.
 
 ## Version 2.12.1 <a name="2.12.1"></a> (October 28, 2022)
 
