@@ -54,11 +54,11 @@ Get acquainted with the latest EDP releases.
 
 ## What's New
 
-We seek to grant users opportunities to make their cutting-edge applications more advanced so we are thrilled to announce the release of our latest application version that comes packed with an array of exciting new features and enhancements. One of the major highlights of this release is the addition of support for the latest Java 17 language version. Furthermore, we have added support for the FastAPI and Flask frameworks for Python language. We have also included support for the .NET 6.0 framework for C# language. Last but not least, we have added support for Helm.
+We seek to grant users opportunities to make their cutting-edge applications more advanced, so we are thrilled to announce the release of our latest application version that comes packed with an array of exciting new features and enhancements. One of the major highlights of this release is the addition of support for the latest Java 17 language version. Furthermore, we have added support for the FastAPI and Flask frameworks for Python language. We have also included support for the .NET 6.0 framework for C# language. Last but not least, we have expanded our support to include Helm as a library. This will allow users to onboard their custom charts and facilitate development.
 
 To improve security and streamline the login process, we have implemented the [RBAC model](https://epam.github.io/edp-install/operator-guide/edp-access-model/?h=rbac#cluster-rbac-resources) for cluster login. Thus, we have enriched this with more granular permissions.
 
-We are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying the platform through EDP. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of flexibility. It is seamlessly integrated with EDP Components.
+We are pleased to announce that our platform now has the ability to use [custom certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) when deploying platform. This feature provides greater flexibility and customization options for users, enabling them to provide an additional level of flexibility. It is seamlessly integrated with EDP Components.
 
 In addition to this, we have introduced the ability to enable [Single Sign-On](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/) for the services (applications) that do not support OIDC from the box. This feature offers greater choice and flexibility, enabling you to choose the optimal authentication solution.
 
