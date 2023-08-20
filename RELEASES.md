@@ -3,6 +3,9 @@
 ## Overview
 
 Get acquainted with the latest EDP releases.
+* [Version 3.4.0](#3.4.0)
+* [Version 3.3.0](#3.3.0)
+* [Version 3.2.2](#3.2.2)
 * [Version 3.2.1](#3.2.1)
 * [Version 3.2.0](#3.2.0)
 * [Version 3.1.0](#3.1.0)
@@ -38,6 +41,238 @@ Get acquainted with the latest EDP releases.
 * [Version 2.6.1](#2.6.1)
 * [Version 2.6.0](#2.6.0)
 </details>
+
+## Version 3.4.0 <a name="3.4.0"></a> (August 18, 2023)
+
+## What's new
+
+This highly anticipated release provides new major functionality to improve scalability, security, customization and automation.
+
+We are thrilled to announce that We've got a new section in EDP called "Configuration." This lets you easily add new clusters to the platform and connect with tools like AWS EKS and Harbor. It also enables users to integrate the platform with Nexus artifact registry or provide code review mechanisms powered by SonarQube.
+
+In addition to it, EPAM Delivery Platform has been provided with a new section called Marketplace. This section contains predefined Templates that are used quickly scaffold a new application. Yet another feature of Marketplace is that users can create their own templates for their further needs, such as automation.
+
+That's not the end. The User Interface has undergone a significant redesign, enhancing the essence of each page. Each of the pages have been refreshed, and CD Pipelines been renamed Environments to represent its meaning more accurately. Say goodbye to Headlamp UI and say hello to the sleek EDP Portal.
+
+Lastly, EDP has been integrated with Next.js framework for JS, as well as Antora, which serves as an engine for creating documentation. Moreover, Helm library now has a corresponding Helm framework, and all autotests can use Maven as a build tool.
+
+
+### Upgrades
+
+- Kaniko executor for jenkins deploy scenario is updated to the [???](???) version [EPMDEDP-12349](https://jiraeu.epam.com/browse/EPMDEDP-12349)
+- Mkdocs is updated to the [???][???] version [EPMDEDP-12354](https://jiraeu.epam.com/browse/EPMDEDP-12354)
+- Tekton-dashboard is updated to the [0.36.1](https://github.com/tektoncd/dashboard/releases/tag/v0.36.1) version [EPMDEDP-12106](https://jiraeu.epam.com/browse/EPMDEDP-12106)
+- Alpine image is updated to the [3.18.2](https://hub.docker.com/layers/library/alpine/3.18.2/images/sha256-25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70?context=explore) version for all operators [EPMDEDP-12085](https://jiraeu.epam.com/browse/EPMDEDP-12085)
+- Nexus image is updated to the [3.58.1](https://hub.docker.com/layers/sonatype/nexus3/3.58.1/images/sha256-586060431b645ddd323f4fb142e4e3fa1684205c1c1351d633a58a0326d35bbb?context=explore) version [EPMDEDP-12460](https://jiraeu.epam.com/browse/EPMDEDP-12460)
+- Headlamp is updated to the [0.19.0](https://headlamp.dev/blog/2023/08/headlamp-0.19.0-a-new-home-with-a-cleaner-ui/) version [EPMDEDP-12414](https://jiraeu.epam.com/browse/EPMDEDP-12414)
+
+
+### New Functionality
+
+- The Marketplace section has been added to EDP Portal. It allows users to view Template kind resources which will be useful when managing applications [EPMDEDP-12268](https://jiraeu.epam.com/browse/EPMDEDP-12268)
+- New section called configuration is added to EDP Portal. In this section, users can connect EDP with different clusters, integrate with different container registries, such as AWS ECR or Harbor, provide Nexus as an artifact storage or integrate code review analysis powered by SonarQube [EPMDEDP-12245](https://jiraeu.epam.com/browse/EPMDEDP-12245)
+- Antora framework support has been added to JavaScript language to rapidly scaffold documentation engine [EPMDEDP-12212](https://jiraeu.epam.com/browse/EPMDEDP-12212)
+- Add helm framework into helm language frameworks in library codebase mapping [EPMDEDP-12135](https://jiraeu.epam.com/browse/EPMDEDP-12135)
+- The Next.js framework support is added to JavaScript language [EPMDEDP-12080](https://jiraeu.epam.com/browse/EPMDEDP-12080)
+- User interface has been significantly refactored. The Headlamp UI has been renamed to EDP Portal [EPMDEDP-11615](https://jiraeu.epam.com/browse/EPMDEDP-11615)
+- The Keycloak user password can also be set from secret. [EPMDEDP-12148](https://jiraeu.epam.com/browse/EPMDEDP-12148)(https://github.com/epam/edp-keycloak-operator/issues/4)
+- The ability to configure SubComponent of component in a realm has been added [EPMDEDP-12233](https://jiraeu.epam.com/browse/EPMDEDP-12233)(https://github.com/epam/edp-keycloak-operator/issues/8)
+- The edp-keycloak-operator is now provided with CI/CD established on Github [EPMDEDP-11400](https://jiraeu.epam.com/browse/EPMDEDP-11400)
+- The codebase-operator now requires a helm-docks stage to ensure documentation updates with chart changes.[EPMDEDP-10380](https://jiraeu.epam.com/browse/EPMDEDP-10380)
+- Since EDP v3.4.0, the Jenkins deploy scenario is concidered deprecated [EPMDEDP-12389](https://jiraeu.epam.com/browse/EPMDEDP-12389)
+- Users can now provide credentials of private registry into any CD namespace. [EPMDEDP-12315](https://jiraeu.epam.com/browse/EPMDEDP-12315)
+- The codebase status tooltip has become interactive. Users can copy status message [EPMDEDP-11651](https://jiraeu.epam.com/browse/EPMDEDP-11651)
+- The links to corresponding documentation has been added throughout the whole EDP Portal[EPMDEDP-12130](https://jiraeu.epam.com/browse/EPMDEDP-12130)
+- Add helm framework into helm language frameworks in library codebase mapping [EPMDEDP-12135](https://jiraeu.epam.com/browse/EPMDEDP-12135)
+
+
+### Enhancements
+
+- The el-listener-app-tls endpoint now support TLS connection for better security [EPMDEDP-12286](https://jiraeu.epam.com/browse/EPMDEDP-12286)
+- The Deploy button has become inactive when using Jenkins deploy scenario [EPMDEDP-12286](https://jiraeu.epam.com/browse/EPMDEDP-12286)
+- The "branchVersionPostfix" field is no longer mandatory when creating release branches [EPMDEDP-12232](https://jiraeu.epam.com/browse/EPMDEDP-12232)
+- Manual/auto trigger type labels are displayed nearly the stage name in CD Pipelines [EPMDEDP-12118](https://jiraeu.epam.com/browse/EPMDEDP-12118)
+- The CD pipline page has been redesigned [EPMDEDP-11992](https://jiraeu.epam.com/browse/EPMDEDP-11992)
+- The labels for DefectDojo and Jira secrets have been added to EDP Portal [EPMDEDP-12448](https://jiraeu.epam.com/browse/EPMDEDP-12448)[EPMDEDP-12452](https://jiraeu.epam.com/browse/EPMDEDP-12452)
+- An example of values.yaml file with custom certs support has been provided[EPMDEDP-12224](https://jiraeu.epam.com/browse/EPMDEDP-12224)
+- The nexusUrl parameter has been added to the global section [EPMDEDP-12220](https://jiraeu.epam.com/browse/EPMDEDP-12220)
+- Default codebase branch has been set for GitLab/GitHub [EPMDEDP-12145](https://jiraeu.epam.com/browse/EPMDEDP-12145)
+- The codebase-operator doesn't depend on the perf-operator anymore [EPMDEDP-12289](https://jiraeu.epam.com/browse/EPMDEDP-12289)
+- The use of '--' characters in the Codebase name is no longer allowed [EPMDEDP-12008](https://jiraeu.epam.com/browse/EPMDEDP-12008)
+- The StartFrom parameter for Codebase versioning is now required for edp version type [EPMDEDP-11958](https://jiraeu.epam.com/browse/EPMDEDP-11958)
+- The Helm template has been aligned for the codebase-operator [EPMDEDP-11537](https://jiraeu.epam.com/browse/EPMDEDP-11537)
+- Add frontend url property for realm [EPMDEDP-11747](https://jiraeu.epam.com/browse/EPMDEDP-11747)
+- The additional printer columns for CR Keycloak and Realm custom resources has been added to cd-pipeline-operator, edp-keycloak-operator and codebase-operator [EPMDEDP-12184](https://jiraeu.epam.com/browse/EPMDEDP-12184)
+- The KeycloakClient attributes have been provided with the default values [EPMDEDP-12334](https://jiraeu.epam.com/browse/EPMDEDP-12334)
+- The build pipeline run button has been moved to branch component [EPMDEDP-11653](https://jiraeu.epam.com/browse/EPMDEDP-11653)
+- Terraform language has been renamed to HCL [EPMDEDP-12291](https://jiraeu.epam.com/browse/EPMDEDP-12291)
+- Https prefixes are now prepended to EDPComponent URLs if they lack it [EPMDEDP-12306](https://jiraeu.epam.com/browse/EPMDEDP-12306)
+- Add "in-cluster" default option into cluster select when creating stage [EPMDEDP-12236](https://jiraeu.epam.com/browse/EPMDEDP-12236)
+- The Stage.spec.source parameter has been provided with default value [EPMDEDP-11389](https://jiraeu.epam.com/browse/EPMDEDP-11389)
+- Stage spec add clusterName property [EPMDEDP-12169](https://jiraeu.epam.com/browse/EPMDEDP-12169)
+
+
+### Fixed Issues
+- Fixed unexpected error when using the /recheck comment for rerun review pipeline in GitLab or GitHub [EPMDEDP-12288](https://jiraeu.epam.com/browse/EPMDEDP-12288)
+- Fixed issue when it was impossible to set autotests when creating a new stage for CD Pipelines [EPMDEDP-12457](https://jiraeu.epam.com/browse/EPMDEDP-12457)
+- Fixed issue with updating CD Pipeline applications when reopening Create/Edit dialogs [EPMDEDP-12395](https://jiraeu.epam.com/browse/EPMDEDP-12395)
+- Fixed incorrect Jenkins CD Pipeline link creation template [EPMDEDP-12286](https://jiraeu.epam.com/browse/EPMDEDP-12286)
+- Fixed issue when EDP Portal showed incorrect deploy version value for Helm applications [EPMDEDP-12126](https://jiraeu.epam.com/browse/EPMDEDP-12126)
+- Flask and FastAPI frameworks have been removed from Python language on library creation [EPMDEDP-12082](https://jiraeu.epam.com/browse/EPMDEDP-12082)
+- Fix issue when the Environments (formerly CD Pipelines) pages wasn't showing. Fixed improper Tekton resource status calculation [EPMDEDP-12028](https://jiraeu.epam.com/browse/EPMDEDP-12028)
+- Fixed issue in UI when users had to do extra clicks after adding stages to CD Pipeline to make the Deploy button active [EPMDEDP-11652](https://jiraeu.epam.com/browse/EPMDEDP-11652)
+- The UPDATE_PASSWORD action is no longer required by default if it is not explicitly set in the spec.requiredUserActions. [EPMDEDP-12204](https://jiraeu.epam.com/browse/EPMDEDP-12204)(https://github.com/epam/edp-keycloak-operator/issues/6)
+- The keycloak.Spec.url/keycloak.Spec.basePath formation has been refactored [EPMDEDP-12293](https://jiraeu.epam.com/browse/EPMDEDP-12293)
+- Fixed issue when the ed-keycloak-operator didn't configure Keycloak [EPMDEDP-12396](https://jiraeu.epam.com/browse/EPMDEDP-12396)
+- Fixed issue when oauth-proxy route creation was incorrect [EPMDEDP-12210](https://jiraeu.epam.com/browse/EPMDEDP-12210)
+- Unexpected linter failures in review pipeline have been fixed for the gerrit-operator [EPMDEDP-12466](https://jiraeu.epam.com/browse/EPMDEDP-12466)
+
+### Documentation
+
+
+* The [Getting Started] section is updated with the following:
+  * The [Overview](https://epam.github.io/edp-install/overview/) page has been updated. [EPMDEDP-11438](https://jiraeu.epam.com/browse/EPMDEDP-11438)
+  * The [Supported Versions](https://epam.github.io/edp-install/supported-versions/) page has been updated. [EPMDEDP-12104](https://jiraeu.epam.com/browse/EPMDEDP-12104)
+
+* The [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/) is updated with the following:
+  * To simplify navigation, the [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/) section has been reorganized. Now it resembles EDP Portal structure.
+  * The [Add Cluster](https://epam.github.io/edp-install/headlamp-user-guide/add-cluster/) page has been added. [EPMDEDP-11885](https://jiraeu.epam.com/browse/EPMDEDP-11885)
+  * The [Manage Clusters](https://epam.github.io/edp-install/headlamp-user-guide/cluster/) page has been added. [EPMDEDP-11885](https://jiraeu.epam.com/browse/EPMDEDP-11885)
+  * The [Add Infrastructure](https://epam.github.io/edp-install/headlamp-user-guide/add-infrastructure/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The [Manage Infrastructures](https://epam.github.io/edp-install/headlamp-user-guide/infrastructure/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The [Marketplace Overview](https://epam.github.io/edp-install/headlamp-user-guide/marketplace/) page has been added. [EPMDEDP-12313](https://jiraeu.epam.com/browse/EPMDEDP-12313)
+  * The [Add Component via Marketplace](https://epam.github.io/edp-install/headlamp-user-guide/add-marketplace/) page has been added. [EPMDEDP-12313](https://jiraeu.epam.com/browse/EPMDEDP-12313)
+  * The [Add Application](https://epam.github.io/edp-install/headlamp-user-guide/add-application/) page has been updated.
+  * The [Add Library](https://epam.github.io/edp-install/headlamp-user-guide/add-library/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The [Add Autotest](https://epam.github.io/edp-install/headlamp-user-guide/add-autotest/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The Application [Overview](https://epam.github.io/edp-install/headlamp-user-guide/application/) page has been updated and renamed to [Manage Applications].
+  * The Library [Overview](https://epam.github.io/edp-install/headlamp-user-guide/library/) page has been updated and renamed to [Manage Libraries].
+  * The Autotest [Overview](https://epam.github.io/edp-install/headlamp-user-guide/autotest/) page has been updated and renamed to [Manage Autotests].
+  * The [Adjust Jira Integration](https://epam.github.io/edp-install/operator-guide/jira-integration/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
+
+* The [Operator Guide](https://epam.github.io/edp-install/operator-guide/) is updated with the following:
+  * Most of the documentation related to Version Control Systems has been moved to the corresponding [subsection](https://epam.github.io/edp-install/operator-guide/vcs/). [EPMDEDP-11781](https://jiraeu.epam.com/browse/EPMDEDP-11781)
+  * The Enable VCS Import Strategy page has been split into 2 pages called [Integrate GitHub/GitLab in Jenkins](https://epam.github.io/edp-install/operator-guide/import-strategy-jenkins/) and [Integrate GitHub/GitLab in Tekton](https://epam.github.io/edp-install/operator-guide/import-strategy-tekton/).
+  * The GitHub Integration page has been renamed to [GitHub Webhook Configuration](https://epam.github.io/edp-install/operator-guide/github-integration/).
+  * The GitLab Integration page has been renamed to [GitLab Webhook Configuration](https://epam.github.io/edp-install/operator-guide/gitlab-integration/).
+  * The [Uninstall EDP](https://epam.github.io/edp-install/operator-guide/delete-edp/) page has been added. (GitHub issue: https://github.com/epam/edp-install/issues/5)
+  * The [EDP install](https://epam.github.io/edp-install/operator-guide/install-edp/) page has been updated. [EPMDEDP-11735](https://jiraeu.epam.com/browse/EPMDEDP-11735)
+  * The [Custom SonarQube Integration](https://epam.github.io/edp-install/operator-guide/sonarqube/) page has been added. ([EPMDEDP-12074](https://jiraeu.epam.com/browse/EPMDEDP-12074))
+  * The [EKS OIDC With Keycloak](https://epam.github.io/edp-install/operator-guide/configure-keycloak-oidc-eks/) page has been updated. (GitHub issue: https://github.com/epam/edp-install/issues/26) [EPMDEDP-12107](https://jiraeu.epam.com/browse/EPMDEDP-12107)
+  * The [Headlamp OIDC Configuration](https://epam.github.io/edp-install/operator-guide/headlamp-oidc/) page has been updated. (GitHub issue: https://github.com/epam/edp-install/issues/26)
+  * The [Install Harbor](https://epam.github.io/edp-install/operator-guide/install-harbor/) page has been added. [EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
+  * The [Integrate Harbor With EDP Pipelines](https://epam.github.io/edp-install/operator-guide/container-registry-harbor-integration-tekton-ci/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
+  * The [Harbor OIDC Configuration](https://epam.github.io/edp-install/operator-guide/harbor-oidc/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
+  * The [v3.2 to 3.3] page has been added. [EPMDEDP-12098](https://jiraeu.epam.com/browse/EPMDEDP-12098)
+  * The [CI Pipelines for Terraform](https://epam.github.io/edp-install/user-guide/terraform-stages/) page has been added. [EPMDEDP-12356](https://jiraeu.epam.com/browse/EPMDEDP-12356)
+  * The [Monitoring](https://epam.github.io/edp-install/operator-guide/tekton-monitoring/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
+  * The [Manage Custom Certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
+
+* The [Use Cases](https://epam.github.io/edp-install/use-cases/) is updated with the following:
+  * The [Autotest as a Quality Gate](https://epam.github.io/edp-install/use-cases/autotest-as-quality-gate/) page has been updated.
+
+* Other:
+  * The [RoadMap](https://epam.github.io/edp-install/roadmap/) section has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
+  * The Autodeploy feature description has been added to the [arch.md](https://github.com/epam/edp-cd-pipeline-operator/blob/master/docs/arch.md) file. [EPMDEDP-11438](https://jiraeu.epam.com/browse/EPMDEDP-11438)
+
+
+- Update security tools section [EPMDEDP-11245](https://jiraeu.epam.com/browse/EPMDEDP-11245) Kulanov
+- Update tools section [EPMDEDP-11245](https://jiraeu.epam.com/browse/EPMDEDP-11245) Kulanov
+- Create Enable Autodeploy doc [EPMDEDP-11438](https://jiraeu.epam.com/browse/EPMDEDP-11438) Kulanov
+- Describe enable oauth-proxy for openshift deploy scenario [EPMDEDP-12211](https://jiraeu.epam.com/browse/EPMDEDP-12211) Mykola Serdiuk
+
+
+## Version 3.3.0 <a name="3.3.0"></a> (May 25, 2023)
+
+## What's new
+
+In this release, [Headlamp UI](https://epam.github.io/edp-install/headlamp-user-guide/) has been updated. Particularly, the component creation procedure has been significantly changed to be more intuitive. Users can also observe visualized autotest monitoring provided with clickable links to the corresponding Tekton pipelines. Also, we provided completely new component type called Infrastructure which is designed to build infrastructures powered by Terraform.
+
+We are thrilled to announce that one of our features called Autodeploy is now also available for Tekton CI tool. It is designed to automatically define the latest artifact tag and upgrade this service on each environment where this service is deployed. This crucial feature aimed to automate the application update procedure when using Tekton.
+
+With version 3.3.0, the Create and Clone strategies have become available for [GitLab/GitHub](https://epam.github.io/edp-install/operator-guide/import-strategy/) version control systems. This enhancement provides increased flexibility for onboarding your applications within our platform.
+
+We have provided Java [Multi-Module](https://epam.github.io/edp-install/headlamp-user-guide/add-application/?h=multi+module#codebase-info-menu) support for Tekton CI tool. This enhancement improves code organization, build time, dependency management, testing, parallel development, and overall maintainability of applications.
+
+One of our major highlights is that code review pipelines can now be re-triggered manually to force their runs. This feature was implemented to simplify the code review process.
+
+From now on, EDP supports Terraform infrastructure as an additional language out of the box. Better still, we have added the new frameworks, such as Vue, Angular and Express frameworks for JavaScript, Gin framework for Go and .Net 3.1 framework support for C# which migrated from the previous deploy scenario.
+
+Apart from that, we are presenting our [EDP Introduction video](https://www.youtube.com/watch?v=Xsy1UKMb8vg&ab_channel=ThePlatformTeam). This video provides a comprehensive overview of the platform's capabilities and benefits, making it easier for users to get started and maximize their productivity.
+
+Lastly, users can easily check their applications for bugs or other issues using [Autotests as a Quality Gate](https://epam.github.io/edp-install/headlamp-user-guide/autotest/#add-autotest-as-a-quality-gate). This powerful addition allows users to conveniently add multiple autotests to any environment, be it development or production. By running the appropriate autotests, users can effectively evaluate the stability of your application and ensure it functions properly.
+
+### Upgrades
+
+* Alpine image version is updated to the [3.16.4](https://hub.docker.com/layers/library/alpine/3.16.4/images/sha256-0b29a7f4d42d6b5d6433ea91322903900e81b95d47d97d909a6e388e840f4f4a?context=explore) version.
+* Go language is updated to the [1.19](https://go.dev/blog/go1.19) version.
+* Prometheus stack is updated to the [45.21.0](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/templates/prometheus) version.
+* Argo CD is updated to the [2.7.0](https://github.com/argoproj/argo-cd/releases/tag/v2.7.0) version.
+* Headlamp is updated to the [0.16.0](https://headlamp.dev/docs/latest/installation/desktop/linux-installation#upgrading) version.
+* Tekton dashboard is updated to the [0.35.0](https://github.com/tektoncd/dashboard/releases) version.
+* Semgrep scanner is updated to the [1.19.0](https://github.com/returntocorp/semgrep/releases/tag/v1.19.0) version.
+* Go security scanner is updated to the [2.15.0](https://github.com/securego/gosec/releases/tag/v2.15.0) version.
+
+### New Functionality
+
+* The additional volumes in [OAuth2-Proxy](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) are now can be added to improve data management.
+* Custom certificates are now also supported by Headlamp to make Headlamp UI more secure.
+* Nexus proxy usage is implemented for the NPM package manager. This feature will increase Nexus flexibility.
+* Code review pipelines can now be re-triggered manually to force their runs by sending "/recheck" reply message. This might be helpful if the code review process is stuck.
+* Autotests as a Quality Gates are now displayed in the CD Pipelines menu for Tekton deploy scenario. This allows users to monitor run status for autotests. By running the appropriate autotests, users can ensure if the application functions properly. Autotest are to also provided with clickable links to have to the possibility to observe pipeline runs.
+* GitLab and GitHub now support Create and Clone strategies. This improvement provides increased flexibility for onboarding applications in EDP.
+* New type of component called Infrastructure is added to Headlamp. It allows users to create cloud infrastructures powered by AWS from scratch.
+* Vue, Angular and Express frameworks support is added for JavaScript language.
+* Gin framework support is added for Go language.
+* Headlamp UI now supports deploying Helm applications.
+* To improve overall integration with other tools. We have added such links to pipeline stages that lead users to Grafana, Kibana, Argo CD, and cluster.
+
+### Enhancements
+
+* To simplify secret creation workflow, Argo CD OIDC client can now be provided with custom secret name.
+* In the `Components` menu in Headlamp UI, near the build status icon, the `Go to the Source code` and `Go to the Quality Gates` clickable icons is added to navigate users directly to the corresponding application code and quality gates.
+* To simplify bug reporting procedure, templates for reporting GitHub issues in our operators are created. Please see an [example](https://github.com/epam/edp-keycloak-operator/issues/new/choose).
+* The [codebase template](https://github.com/epam/edp-codebase-operator/blob/master/build/templates/applications/helm-chart/kubernetes/templates/deployment.yaml) chart has been refactored, so now it is aligned to upstream and  doesn't contain deprecated parameters.
+* The .Net language option is hidden from the codebase creation menu for non-Jenkins CI tools.
+* Now the `code-review` pipeline includes the `Dockerbuild-verify` stage that depends on the `build` step, thus allowing to build the application.
+
+### Fixed Issues
+
+* The `JenkinsFolder` repository URL is added for create/clone strategy if Jenkins deploy scenario is used.
+* The hard-coded `project-creator` SSH user was removed, Git application path to Git repo provisioning was aligned.
+* Fixed issue when the first reconciliation fails with a git clone error for import strategy.
+* Hotfix swap namespace/name in delete resource request.
+* Fixed issue when Java and JavaScript pipelines were failing when the JIRA integration option was enabled for create strategy.
+* Fixed wrong tag attachment when EDP versioning is used.
+
+### Documentation
+
+* The [User Guide](https://epam.github.io/edp-install/headlamp-user-guide/) is updated with the following:
+  * The [Add CD Pipeline](https://epam.github.io/edp-install/headlamp-user-guide/add-cd-pipeline/) page has been updated.
+  * The [Add Application](https://epam.github.io/edp-install/headlamp-user-guide/add-application/) page has been updated.
+  * The [Add Autotest](https://epam.github.io/edp-install/headlamp-user-guide/add-autotest/) page has been updated.
+  * The [Add Library](https://epam.github.io/edp-install/headlamp-user-guide/add-library/) page has been updated.
+
+* The [Operator Guide](https://epam.github.io/edp-install/operator-guide/) is updated with the following:
+  * The [Manage Namespace](https://epam.github.io/edp-install/operator-guide/namespace-management/) page has been added.
+  * The [Argo CD Integration](https://epam.github.io/edp-install/operator-guide/argocd-integration/#deploy-argo-cd-application) page has been updated.
+  * The [Aggregate Application Logs Using EFK Stack](https://epam.github.io/edp-install/operator-guide/kibana-ilm-rollover/) page has been added.
+  * The [Protect Endpoints](https://epam.github.io/edp-install/operator-guide/oauth2-proxy/) page has been updated.
+  * The [Install EDP](https://epam.github.io/edp-install/operator-guide/install-edp/) page has been updated.
+  * The [Microsoft Teams Notification](https://epam.github.io/edp-install/operator-guide/notification-msteams/) page has been added.
+  * The [Set Up Kubernetes](https://epam.github.io/edp-install/operator-guide/kubernetes-cluster-settings/) page has been updated.
+  * The [Enable VCS Import Strategy](https://epam.github.io/edp-install/operator-guide/import-strategy/) page has been updated.
+
+* The [Use Cases](https://epam.github.io/edp-install/use-cases/) is updated with the following:
+  * The [Secured Secrets Management for Application Deployment](https://epam.github.io/edp-install/use-cases/external-secrets/) page has been added.
+
+
+## Version 3.2.2 <a name="3.2.2"></a> (April 21, 2023)
+
+### Fixed Issues
+
+* Fixed issue when the `keycloakclientscope` resource couldn't be created depending on the Argo CD integration settings.
+
 
 ## Version 3.2.1 <a name="3.2.1"></a> (March 31, 2023)
 
