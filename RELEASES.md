@@ -44,27 +44,26 @@ Get acquainted with the latest EDP releases.
 
 ## Version 3.4.0 <a name="3.4.0"></a> (August 18, 2023)
 
+
 ## What's new
 
-This highly anticipated release provides new major functionality to improve scalability, security, customization and automation.
+This highly anticipated release introduces significant new functionality aimed at improving scalability, security, customization, and automation within the EPAM Delivery Platform (EDP).
 
-We are thrilled to announce that We've got a new section in EDP called "Configuration." This lets you easily add new clusters to the platform and connect with tools like AWS EKS and Harbor. It also enables users to integrate the platform with Nexus artifact registry or provide code review mechanisms powered by SonarQube.
+We are excited to announce the addition of a new section called "Configuration" to EDP. This lets users easily add new clusters to the platform and connect with tools like AWS EKS and Harbor. It also enables users to integrate the platform with Nexus artifact registry or leverage code review mechanisms powered by SonarQube.
 
-In addition to it, EPAM Delivery Platform has been provided with a new section called Marketplace. This section contains predefined Templates that are used quickly scaffold a new application. Yet another feature of Marketplace is that users can create their own templates for their further needs, such as automation.
+In addition to it, EPAM Delivery Platform has been provided with a new section called "Marketplace". This section contains predefined Templates that are used quickly scaffold a new application. Yet another feature of the section is that users can create their own templates for their further needs, such as automation.
 
-That's not the end. The User Interface has undergone a significant redesign, enhancing the essence of each page. Each of the pages have been refreshed, and CD Pipelines been renamed Environments to represent its meaning more accurately. Say goodbye to Headlamp UI and say hello to the sleek EDP Portal.
+In line with these enhancements, the User Interface has undergone a significant redesign, enhancing the essence of each page. Each of the pages have been refreshed, and "CD Pipelines" section been renamed to "Environments" to represent its meaning more accurately. Say goodbye to Headlamp UI and say hello to the sleek EDP Portal.
 
-Lastly, EDP has been integrated with Next.js framework for JS, as well as Antora, which serves as an engine for creating documentation. Moreover, Helm library now has a corresponding Helm framework, and all autotests can use Maven as a build tool.
+Moreover, EDP has embraced the Next.js framework for JavaScript development, along with Antora, a powerful engine for documentation creation. Additionally, the Helm library now includes a corresponding Helm framework. Furthermore, Maven can now serve as a build tool for all autotests.
 
 
 ### Upgrades
 
-- Kaniko executor for jenkins deploy scenario is updated to the [???](???) version [EPMDEDP-12349](https://jiraeu.epam.com/browse/EPMDEDP-12349)
-- Mkdocs is updated to the [???][???] version [EPMDEDP-12354](https://jiraeu.epam.com/browse/EPMDEDP-12354)
-- Tekton-dashboard is updated to the [0.36.1](https://github.com/tektoncd/dashboard/releases/tag/v0.36.1) version [EPMDEDP-12106](https://jiraeu.epam.com/browse/EPMDEDP-12106)
-- Alpine image is updated to the [3.18.2](https://hub.docker.com/layers/library/alpine/3.18.2/images/sha256-25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70?context=explore) version for all operators [EPMDEDP-12085](https://jiraeu.epam.com/browse/EPMDEDP-12085)
-- Nexus image is updated to the [3.58.1](https://hub.docker.com/layers/sonatype/nexus3/3.58.1/images/sha256-586060431b645ddd323f4fb142e4e3fa1684205c1c1351d633a58a0326d35bbb?context=explore) version [EPMDEDP-12460](https://jiraeu.epam.com/browse/EPMDEDP-12460)
-- Headlamp is updated to the [0.19.0](https://headlamp.dev/blog/2023/08/headlamp-0.19.0-a-new-home-with-a-cleaner-ui/) version [EPMDEDP-12414](https://jiraeu.epam.com/browse/EPMDEDP-12414)
+- Tekton-dashboard is updated to the [0.36.1](https://github.com/tektoncd/dashboard/releases/tag/v0.36.1) version. [EPMDEDP-12106](https://jiraeu.epam.com/browse/EPMDEDP-12106)
+- Alpine image is updated to the [3.18.2](https://hub.docker.com/layers/library/alpine/3.18.2/images/sha256-25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70?context=explore) version for all operators. [EPMDEDP-12085](https://jiraeu.epam.com/browse/EPMDEDP-12085)
+- Nexus image is updated to the [3.58.1](https://hub.docker.com/layers/sonatype/nexus3/3.58.1/images/sha256-586060431b645ddd323f4fb142e4e3fa1684205c1c1351d633a58a0326d35bbb?context=explore) version. [EPMDEDP-12460](https://jiraeu.epam.com/browse/EPMDEDP-12460)
+- Headlamp is updated to the [0.19.0](https://headlamp.dev/blog/2023/08/headlamp-0.19.0-a-new-home-with-a-cleaner-ui/) version. [EPMDEDP-12414](https://jiraeu.epam.com/browse/EPMDEDP-12414)
 
 
 ### New Functionality
@@ -143,28 +142,28 @@ Lastly, EDP has been integrated with Next.js framework for JS, as well as Antora
   * The [Marketplace Overview](https://epam.github.io/edp-install/headlamp-user-guide/marketplace/) page has been added. [EPMDEDP-12313](https://jiraeu.epam.com/browse/EPMDEDP-12313)
   * The [Add Component via Marketplace](https://epam.github.io/edp-install/headlamp-user-guide/add-marketplace/) page has been added. [EPMDEDP-12313](https://jiraeu.epam.com/browse/EPMDEDP-12313)
   * The [Add Application](https://epam.github.io/edp-install/headlamp-user-guide/add-application/) page has been updated.
-  * The [Add Library](https://epam.github.io/edp-install/headlamp-user-guide/add-library/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
-  * The [Add Autotest](https://epam.github.io/edp-install/headlamp-user-guide/add-autotest/) page has been added. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The [Add Library](https://epam.github.io/edp-install/headlamp-user-guide/add-library/) page has been updated. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
+  * The [Add Autotest](https://epam.github.io/edp-install/headlamp-user-guide/add-autotest/) page has been updated. [EPMDEDP-12208](https://jiraeu.epam.com/browse/EPMDEDP-12208)
   * The Application [Overview](https://epam.github.io/edp-install/headlamp-user-guide/application/) page has been updated and renamed to [Manage Applications].
   * The Library [Overview](https://epam.github.io/edp-install/headlamp-user-guide/library/) page has been updated and renamed to [Manage Libraries].
   * The Autotest [Overview](https://epam.github.io/edp-install/headlamp-user-guide/autotest/) page has been updated and renamed to [Manage Autotests].
   * The [Adjust Jira Integration](https://epam.github.io/edp-install/operator-guide/jira-integration/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
 
 * The [Operator Guide](https://epam.github.io/edp-install/operator-guide/) is updated with the following:
+  * The [Uninstall EDP](https://epam.github.io/edp-install/operator-guide/delete-edp/) page has been added. (GitHub issue: https://github.com/epam/edp-install/issues/5)
+  * The [Custom SonarQube Integration](https://epam.github.io/edp-install/operator-guide/sonarqube/) page has been added. [EPMDEDP-12074](https://jiraeu.epam.com/browse/EPMDEDP-12074)
+  * The [Install Harbor](https://epam.github.io/edp-install/operator-guide/install-harbor/) page has been added. [EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
+  * The [Harbor OIDC Configuration](https://epam.github.io/edp-install/operator-guide/harbor-oidc/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
+  * The [v3.2 to 3.3] page has been added. [EPMDEDP-12098](https://jiraeu.epam.com/browse/EPMDEDP-12098)
+  * The [Integrate Harbor With EDP Pipelines](https://epam.github.io/edp-install/operator-guide/container-registry-harbor-integration-tekton-ci/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
   * Most of the documentation related to Version Control Systems has been moved to the corresponding [subsection](https://epam.github.io/edp-install/operator-guide/vcs/). [EPMDEDP-11781](https://jiraeu.epam.com/browse/EPMDEDP-11781)
+  * The [CI Pipelines for Terraform](https://epam.github.io/edp-install/user-guide/terraform-stages/) page has been updated. [EPMDEDP-12356](https://jiraeu.epam.com/browse/EPMDEDP-12356)
   * The Enable VCS Import Strategy page has been split into 2 pages called [Integrate GitHub/GitLab in Jenkins](https://epam.github.io/edp-install/operator-guide/import-strategy-jenkins/) and [Integrate GitHub/GitLab in Tekton](https://epam.github.io/edp-install/operator-guide/import-strategy-tekton/).
   * The GitHub Integration page has been renamed to [GitHub Webhook Configuration](https://epam.github.io/edp-install/operator-guide/github-integration/).
   * The GitLab Integration page has been renamed to [GitLab Webhook Configuration](https://epam.github.io/edp-install/operator-guide/gitlab-integration/).
-  * The [Uninstall EDP](https://epam.github.io/edp-install/operator-guide/delete-edp/) page has been added. (GitHub issue: https://github.com/epam/edp-install/issues/5)
   * The [EDP install](https://epam.github.io/edp-install/operator-guide/install-edp/) page has been updated. [EPMDEDP-11735](https://jiraeu.epam.com/browse/EPMDEDP-11735)
-  * The [Custom SonarQube Integration](https://epam.github.io/edp-install/operator-guide/sonarqube/) page has been added. ([EPMDEDP-12074](https://jiraeu.epam.com/browse/EPMDEDP-12074))
   * The [EKS OIDC With Keycloak](https://epam.github.io/edp-install/operator-guide/configure-keycloak-oidc-eks/) page has been updated. (GitHub issue: https://github.com/epam/edp-install/issues/26) [EPMDEDP-12107](https://jiraeu.epam.com/browse/EPMDEDP-12107)
   * The [Headlamp OIDC Configuration](https://epam.github.io/edp-install/operator-guide/headlamp-oidc/) page has been updated. (GitHub issue: https://github.com/epam/edp-install/issues/26)
-  * The [Install Harbor](https://epam.github.io/edp-install/operator-guide/install-harbor/) page has been added. [EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
-  * The [Integrate Harbor With EDP Pipelines](https://epam.github.io/edp-install/operator-guide/container-registry-harbor-integration-tekton-ci/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
-  * The [Harbor OIDC Configuration](https://epam.github.io/edp-install/operator-guide/harbor-oidc/) page has been added.[EPMDEDP-12181](https://jiraeu.epam.com/browse/EPMDEDP-12181)
-  * The [v3.2 to 3.3] page has been added. [EPMDEDP-12098](https://jiraeu.epam.com/browse/EPMDEDP-12098)
-  * The [CI Pipelines for Terraform](https://epam.github.io/edp-install/user-guide/terraform-stages/) page has been added. [EPMDEDP-12356](https://jiraeu.epam.com/browse/EPMDEDP-12356)
   * The [Monitoring](https://epam.github.io/edp-install/operator-guide/tekton-monitoring/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
   * The [Manage Custom Certificates](https://epam.github.io/edp-install/operator-guide/manage-custom-certificate/) page has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
 
@@ -172,14 +171,8 @@ Lastly, EDP has been integrated with Next.js framework for JS, as well as Antora
   * The [Autotest as a Quality Gate](https://epam.github.io/edp-install/use-cases/autotest-as-quality-gate/) page has been updated.
 
 * Other:
-  * The [RoadMap](https://epam.github.io/edp-install/roadmap/) section has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
   * The Autodeploy feature description has been added to the [arch.md](https://github.com/epam/edp-cd-pipeline-operator/blob/master/docs/arch.md) file. [EPMDEDP-11438](https://jiraeu.epam.com/browse/EPMDEDP-11438)
-
-
-- Update security tools section [EPMDEDP-11245](https://jiraeu.epam.com/browse/EPMDEDP-11245) Kulanov
-- Update tools section [EPMDEDP-11245](https://jiraeu.epam.com/browse/EPMDEDP-11245) Kulanov
-- Create Enable Autodeploy doc [EPMDEDP-11438](https://jiraeu.epam.com/browse/EPMDEDP-11438) Kulanov
-- Describe enable oauth-proxy for openshift deploy scenario [EPMDEDP-12211](https://jiraeu.epam.com/browse/EPMDEDP-12211) Mykola Serdiuk
+  * The [RoadMap](https://epam.github.io/edp-install/roadmap/) section has been updated. [EPMDEDP-11905](https://jiraeu.epam.com/browse/EPMDEDP-11905)
 
 
 ## Version 3.3.0 <a name="3.3.0"></a> (May 25, 2023)
