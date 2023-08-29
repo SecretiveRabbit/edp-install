@@ -3,7 +3,7 @@
 ## Overview
 
 Get acquainted with the latest EDP releases.
-* [Version 3.4.0](#3.4.1)
+* [Version 3.4.1](#3.4.1)
 * [Version 3.4.0](#3.4.0)
 * [Version 3.3.0](#3.3.0)
 * [Version 3.2.2](#3.2.2)
