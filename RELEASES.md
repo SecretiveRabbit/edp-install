@@ -47,7 +47,7 @@ Get acquainted with the latest EDP releases.
 
 ### Upgrades
 
-* The edp-headlamp component is update to the [0.8.0](https://github.com/epam/edp-headlamp/releases/tag/v0.8.0) version.
+* The edp-headlamp component is updated to the [0.8.0](https://github.com/epam/edp-headlamp/releases/tag/v0.8.0) version.
 
 ### Enhancements
 
