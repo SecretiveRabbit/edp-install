@@ -86,46 +86,43 @@ To strengthen security measures, we're [expanding our security checks by integra
 ### New Functionality
 
 * The Marketplace section has been added to EDP Portal. It allows users to view Template kind resources which will be useful when managing applications.
-* New section called configuration is added to EDP Portal. In this section, users can connect EDP with different clusters, integrate with different container registries, such as AWS ECR or Harbor, provide Nexus as an artifact storage or integrate code review analysis powered by SonarQube.
+* New section called Configuration is added to EDP Portal. In this section, users can connect EDP with different clusters, integrate with different container registries, such as AWS ECR or Harbor, provide Nexus as an artifact storage or integrate code review analysis powered by SonarQube.
 * Antora framework support has been added to JavaScript language to rapidly scaffold documentation engine.
-* Add helm framework into helm language frameworks in library codebase mapping.
+* The Helm framework has been added into Helm language frameworks in library codebase mapping.
 * The Next.js framework support is added to JavaScript language.
 * User interface has been significantly refactored. The Headlamp UI has been renamed to EDP Portal.
 * The Keycloak user password can also be set from secret.
 * The ability to configure SubComponent of component in a realm has been added.
 * The edp-keycloak-operator is now provided with CI/CD established on Github.
-* The codebase-operator now requires a helm-docks stage to ensure documentation updates with chart changes.
+* The codebase-operator now requires the helm-docks stage to ensure documentation updates with chart changes.
 * Since EDP v3.4.0, the Jenkins deploy scenario is concidered deprecated.
 * Users can now provide credentials of private registry into any CD namespace.
 * The codebase status tooltip has become interactive. Users can copy status message.
 * The links to corresponding documentation has been added throughout the whole EDP Portal.
-* Add helm framework into helm language frameworks in library codebase mapping.
 
 
 ### Enhancements
 
-* The el-listener-app-tls endpoint now support TLS connection for better security.
-* The Deploy button has become inactive when using Jenkins deploy scenario.
-* The "branchVersionPostfix" field is no longer mandatory when creating release branches.
+* The `el-listener-app-tls` endpoint now supports TLS connection for better security.
+* The `branchVersionPostfix` field is no longer mandatory when creating release branches.
 * Manual/auto trigger type labels are displayed nearly the stage name in CD Pipelines.
 * The CD pipline page has been redesigned.
 * The labels for DefectDojo and Jira secrets have been added to EDP Portal.
 * An example of values.yaml file with custom certs support has been provided.
-* The nexusUrl parameter has been added to the global section.
-* Default codebase branch has been set for GitLab/GitHub.
+* The `nexusUrl` parameter has been added to the global section.
+* The default codebase branch has been set for GitLab/GitHub.
 * The codebase-operator doesn't depend on the perf-operator anymore.
 * The use of '--' characters in the Codebase name is no longer allowed.
-* The StartFrom parameter for Codebase versioning is now required for edp version type.
+* The `StartFrom` parameter for Codebase versioning is now required for edp version type.
 * The Helm template has been aligned for the codebase-operator.
-* Add frontend url property for realm.
+* Users now have the option to configure Keycloak Frontend URL via the edp-keycloak-operator.
 * The additional printer columns for CR Keycloak and Realm custom resources has been added to cd-pipeline-operator, edp-keycloak-operator and codebase-operator.
-* The KeycloakClient attributes have been provided with the default values.
+* The `KeycloakClient` attributes have been provided with the default values.
 * The build pipeline run button has been moved to branch component.
-* Terraform language has been renamed to HCL.
+* Terraform language has been renamed to HCL in the application code language list.
 * Https prefixes are now prepended to EDPComponent URLs if they lack it.
-* Add "in-cluster" default option into cluster select when creating stage.
-* The Stage.spec.source parameter has been provided with default value.
-* Stage spec add clusterName property.
+* The "in-cluster" option has been set as default into cluster select when creating stage.
+* The `Stage.spec.source` parameter has been provided with default value.
 
 
 ### Fixed Issues
@@ -133,13 +130,12 @@ To strengthen security measures, we're [expanding our security checks by integra
 * Fixed unexpected error when using the /recheck comment for rerun review pipeline in GitLab or GitHub.
 * Fixed issue when it was impossible to set autotests when creating a new stage for CD Pipelines.
 * Fixed issue with updating CD Pipeline applications when reopening Create/Edit dialogs.
-* Fixed incorrect Jenkins CD Pipeline link creation template.
 * Fixed issue when EDP Portal showed incorrect deploy version value for Helm applications.
 * Flask and FastAPI frameworks have been removed from Python language on library creation.
-* Fix issue when the Environments (formerly CD Pipelines) pages wasn't showing. Fixed improper Tekton resource status calculation.
+* Fixed issue when the Environments (formerly CD Pipelines) pages wasn't showing. Fixed improper Tekton resource status calculation.
 * Fixed issue in UI when users had to do extra clicks after adding stages to CD Pipeline to make the Deploy button active.
-* The UPDATE_PASSWORD action is no longer required by default if it is not explicitly set in the spec.requiredUserActions.
-* The keycloak.Spec.url/keycloak.Spec.basePath formation has been refactored.
+* The `UPDATE_PASSWORD` action is no longer required by default if it is not explicitly set in the spec.requiredUserActions.
+* The `keycloak.Spec.url/keycloak.Spec.basePath` formation has been refactored.
 * Fixed issue when the ed-keycloak-operator didn't configure Keycloak.
 * Fixed issue when oauth-proxy route creation was incorrect.
 * Unexpected linter failures in review pipeline have been fixed for the gerrit-operator.
